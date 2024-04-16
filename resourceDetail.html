@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Detail Page</title>
+    
+    <!-- Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    
+    <!-- Lib -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    
+    <!-- Custom  -->
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/common.css">
+    <link rel="stylesheet" href="/public/css/default.css">
+    <link rel="stylesheet" href="/public/css/sub.css">
+    <script defer src="/public/js/main.js"></script>
+</head>
+<body>
+    <header id="header" class="sub-header menu-black">
+        <div class="inr">
+            <figure class="logo-wrap">
+                <a href="/index.html">
+                    <img src="/public/img/logo.png" alt=" 로고 | logo | 허들러스" class="logo">
+                </a>
+            </figure>
+            <div class="header-content flex-b--c">
+                <ul class="header-menus">
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Service</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/Ga4.html">GA4 완전 도입</a></li>
+                            <li class="header-sub-menu"><a href="/martechOnboarding.html">마테크 온보딩</a></li>
+                            <li class="header-sub-menu"><a href="/growthConsulting.html">그로스 컨설팅</a></li>
+                            <li class="header-sub-menu"><a href="/dashboard.html">통합 대시보드 구축</a></li>
+                            <li class="header-sub-menu"><a href="/education.html">교육 및 트레이닝</a></li>
+                            <li class="header-sub-menu"><a href="/martechMaintenance.html">마테크 유지보수</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu"><a href="/portfolio.html">Portfolio</a></li>
+                    <li class="header-menu"><a href="/caseStudy.html">Case Study</a></li>
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Resources</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/resource.html">Blog / News</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Company</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/aboutUs.html">About Us</a></li>
+                            <li class="header-sub-menu"><a href="/ourTeam.html">Our Team</a></li>
+                            <li class="header-sub-menu"><a href="/recruitment.html">Recruitment</a></li>
+                            <li class="header-sub-menu"><a href="/contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn-orange">
+                    <a href="/contact.html">티타임 신청</a>
+                </button>
+            </div>
+            <div class="mobile-menu-btn pc-hidden" onclick="mobileBtnHandler()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <span class="header-bg">
+            <div class="inr">
+                <ul class="header-menu-previews">
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Service</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Portfolio</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Case Study</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Resources</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Company</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </span>
+    </header>
+    <main class="sub-wrap">
+        <section id="resource-detail" class="board-page">
+            <div class="inr">
+                <div class="resource-detail-content">
+                    <div class="flex-b--s">
+                        <div class="resource-detail-left">
+                            <h1 class="resource-detail-tit">자료실 제목</h1>
+                            <div class="resource-left-content">
+                                <p>
+                                    <b>언론·출판에 대한 허가나 검열과 집회·결사에 대한 허가</b>는 인정되지 아니한다. 국가는 주택개발정책등을 통하여 모든 국민이 쾌적한 주거생활을 할 수 있도록 노력하여야 한다.
+                                    <br><br>
+                                    타인의 범죄행위로 인하여 생명·신체에 대한 피해를 받은 국민은 법률이 정하는 바에 의하여 국가로부터 구조를 받을 수 있다. 국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다.
+                                </p>
+                                <ul>
+                                    <li>생명·신체에 대한 피해</li>
+                                    <li>생명·신체에 대한 피해</li>
+                                    <li>생명·신체에 대한 피해</li>
+                                    <li>생명·신체에 대한 피해</li>
+                                    <li>생명·신체에 대한 피해</li>
+                                </ul>
+                                <p>
+                                    타인의 범죄행위로 인하여 생명·신체에 대한 피해를 받은 국민은 법률이 정하는 바에 의하여 국가로부터 구조를 받을 수 있다. 국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다.
+                                </p>
+                            </div>
+                            <div class="resource-left-bottom">
+                                <button class="btn-orange" data-bs-toggle="modal" data-bs-target="#resourceDownload">
+                                    지금 다운로드
+                                    <figure class="icon-download"><img src="/public/img/icon-download.png" alt="icon-download"></figure>
+                                </button>
+                                <span>
+                                    <small>자료 만족도</small>
+                                    <ul class="star-lists">
+                                        <li class="star-list">
+                                            <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                        </li>
+                                        <li class="star-list">
+                                            <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                        </li>
+                                        <li class="star-list">
+                                            <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                        </li>
+                                        <li class="star-list">
+                                            <img src="/public/img/icon-star-half.png" alt="icon-star-half">
+                                        </li>
+                                        <li class="star-list">
+                                            <img src="/public/img/icon-star-empty.png" alt="icon-star-empty">
+                                        </li>
+                                    </ul>
+                                </span>
+                            </div>
+                        </div>
+                        <figure class="resource-detail-thumb">
+                            <img src="/public/img/img-resource-detail.jpg" alt="img-resource-detail">
+                        </figure>
+                    </div>
+                </div>
+                <div class="related-portfolio">
+                    <h2>허들러스의 다른 성공 자료</h2>
+                    <div class="resource-lists-wrap">
+                        <ul class="resource-lists">
+                            <li class="resource-list">
+                                <figure class="resource-thumb">
+                                    <img src="/public/img/img-resource.jpg" alt="img-resource">
+                                </figure>
+                                <div class="resource-content">
+                                    <strong class="resource-title">삼성전자C랩</strong>
+                                    <ul class="portfolio-categories">
+                                        <li class="portfolio-category">GA4</li>
+                                        <li class="portfolio-category">Bigquery</li>
+                                    </ul>
+                                </div>
+                                <figure class="portfolio-more">
+                                    <a href="">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                        </svg>
+                                    </a>
+                                </figure>
+                            </li>
+                            <li class="resource-list">
+                                <figure class="resource-thumb">
+                                    <img src="/public/img/img-resource.jpg" alt="img-resource">
+                                </figure>
+                                <div class="resource-content">
+                                    <strong class="resource-title">삼성전자C랩</strong>
+                                    <ul class="portfolio-categories">
+                                        <li class="portfolio-category">GA4</li>
+                                        <li class="portfolio-category">Bigquery</li>
+                                    </ul>
+                                </div>
+                                <figure class="portfolio-more">
+                                    <a href="">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                        </svg>
+                                    </a>
+                                </figure>
+                            </li>
+                            <li class="resource-list">
+                                <figure class="resource-thumb">
+                                    <img src="/public/img/img-resource.jpg" alt="img-resource">
+                                </figure>
+                                <div class="resource-content">
+                                    <strong class="resource-title">삼성전자C랩</strong>
+                                    <ul class="portfolio-categories">
+                                        <li class="portfolio-category">GA4</li>
+                                        <li class="portfolio-category">Bigquery</li>
+                                    </ul>
+                                </div>
+                                <figure class="portfolio-more">
+                                    <a href="">
+                                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                        </svg>
+                                    </a>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="footer-banner">
+        <div class="inr">
+            <p>
+                <span>간단한 티타임도 괜찮습니다.</span>
+                문의사항을 남겨주시면 <br>24시간 내로 연락드립니다.
+            </p>
+            <button class="btn-white after-arrow right">
+                <a href="">서비스 문의하기</a>
+            </button>
+        </div>
+    </section>
+    <footer>
+        <div class="inr">
+            <figure class="logo-wrap">
+                <a href="/index.html">
+                    <img src="/public/img/f-logo.png" alt=" 로고 | logo | 허들러스" class="logo">
+                </a>
+            </figure>
+            <p class="address">
+                서울 광진구 아차산로51길 65, 2층
+                <br>사업자 등록번호 : 660-46-00794 | team@hurdlers.kr | <br class="pc-hidden"> 대표이사. 유성민
+            </p>
+            <p class="copy">© 2024 by Hurdlers</p>
+            <span class="pdf-down after-arrow right"><a href="/profile.pdf" download>회사소개서 다운로드</a></span>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="resourceDownload" tabindex="-1" role="dialog" aria-labelledby="resourceDownloadLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="resourceDownloadLabel">
+                    자료 다운로드
+                    <small>신청 후 즉시 파일이 전달됩니다.</small>
+                </h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <span class="input-wrap">
+                        <label for="">이름</label>
+                        <input type="text" placeholder="이름을 입력하세요.">
+                    </span>
+                    <span class="input-wrap">
+                        <label for="">이메일</label>
+                        <input type="text" placeholder="이메일를 입력하세요.">
+                    </span>
+                    <span class="input-wrap">
+                        <label for="">직종</label>
+                        <input type="text" placeholder="직종을 입력하세요.">
+                    </span>
+                    <span class="input-wrap">
+                        <label for="">전화번호</label>
+                        <input type="text" placeholder="전화번호를 입력하세요.">
+                    </span>
+                    <div class="formCheck">
+                        <label for="pricheck" class="checkBox">
+                            <a href="">개인정보 활용 동의</a>
+                            <input type="checkbox" value="1" name="pricheck" id="pricheck" required="">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn-orange">신청하기</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
