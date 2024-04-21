@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recruitment Page</title>
+    <title>Recruitment Detail Page</title>
     
     <!-- Font -->
     <style>
@@ -26,7 +26,7 @@
     <script defer src="/public/js/main.js"></script>
 </head>
 <body>
-    <header id="header" class="main-header">
+    <header id="header" class="sub-header menu-black">
         <div class="inr">
             <figure class="logo-wrap">
                 <a href="/index.html">
@@ -38,12 +38,12 @@
                     <li class="header-menu">
                         <span class="after-arrow bottom">Service</span>
                         <ul class="header-sub-menus">
-                            <li class="header-sub-menu"><a href="/Ga4.html">GA4 완전 도입</a></li>
-                            <li class="header-sub-menu"><a href="/martechOnboarding.html">마테크 온보딩</a></li>
-                            <li class="header-sub-menu"><a href="/growthConsulting.html">그로스 컨설팅</a></li>
-                            <li class="header-sub-menu"><a href="/dashboard.html">통합 대시보드 구축</a></li>
-                            <li class="header-sub-menu"><a href="/education.html">교육 및 트레이닝</a></li>
-                            <li class="header-sub-menu"><a href="/martechMaintenance.html">마테크 유지보수</a></li>
+                            <li class="header-sub-menu"><a href="/service/Ga4.html">GA4 완전 도입</a></li>
+                            <li class="header-sub-menu"><a href="/service/martechOnboarding.html">마테크 온보딩</a></li>
+                            <li class="header-sub-menu"><a href="/service/growthConsulting.html">그로스 컨설팅</a></li>
+                            <li class="header-sub-menu"><a href="/service/dashboard.html">통합 대시보드 구축</a></li>
+                            <li class="header-sub-menu"><a href="/service/education.html">교육 및 트레이닝</a></li>
+                            <li class="header-sub-menu"><a href="/service/martechMaintenance.html">마테크 유지보수</a></li>
                         </ul>
                     </li>
                     <li class="header-menu"><a href="/portfolio.html">Portfolio</a></li>
@@ -51,21 +51,21 @@
                     <li class="header-menu">
                         <span class="after-arrow bottom">Resources</span>
                         <ul class="header-sub-menus">
-                            <li class="header-sub-menu"><a href="/resource.html">Blog / News</a></li>
+                            <li class="header-sub-menu"><a href="/resource/blog.html">Blog / News</a></li>
+                            <li class="header-sub-menu"><a href="/resource/resource.html">자료실</a></li>
                         </ul>
                     </li>
                     <li class="header-menu">
                         <span class="after-arrow bottom">Company</span>
                         <ul class="header-sub-menus">
-                            <li class="header-sub-menu"><a href="/aboutUs.html">About Us</a></li>
-                            <li class="header-sub-menu"><a href="/ourTeam.html">Our Team</a></li>
-                            <li class="header-sub-menu"><a href="/recruitment.html">Recruitment</a></li>
-                            <li class="header-sub-menu"><a href="/contact.html">Contact Us</a></li>
+                             <li class="header-sub-menu"><a href="/company/aboutUs.html">About Us</a></li>
+                            <li class="header-sub-menu"><a href="/company/recruitment.html">Recruitment</a></li>
+                            <li class="header-sub-menu"><a href="/company/contact.html">Contact Us</a></li>
                         </ul>
                     </li>
                 </ul>
                 <button class="btn-orange">
-                    <a href="/contact.html">티타임 신청</a>
+                    <a href="/company/contact.html">티타임 신청</a>
                 </button>
             </div>
             <div class="mobile-menu-btn pc-hidden" onclick="mobileBtnHandler()">
@@ -116,68 +116,59 @@
             </div>
         </span>
     </header>
-    <main>
-        <section id="recruitment">
+    <main class="sub-wrap">
+        <section id="recruitmentDetail" class="board-page">
             <div class="inr">
                 <div class="flex-b--s">
-                    <div class="recruitment-left">
-                        <h1>디지털 마케팅 분야에서<br> 
-                            최고가 될때까지 성장하고 싶다면,<br>
-                            팀 허들러스로 오세요.
-                        </h1>
-                        <p>우리는 수많은 큰 규모의 조직과 협력하여, 의미있는 데이터 인사이트를 
-                            제공하는 강력한 경험을 제공해 왔습니다.
-                            <br><br>
-                            팀 허들러스는 비즈니스에 바로 사용할 수 있는 데이터를 기반으로 더 나은 
-                            마케팅 결정을 내릴 수 있다고 믿는 유능한 전문가 팀입니다.
-                            <br><br>
-                            우리는 열정과 신뢰를 바탕으로 고객을 잘 돌보고, 동료를 존중하는 마음으로 
-                            대합니다.
-                        </p>
-                        <ul class="position-lists">
-                            <li class="position-list">
-                                <a href="/recruitmentDetail.html" class="flex-b--c">
-                                    <span>Growth Consultant (신입 / 경력)</span>
-                                    <figure><img src="/public/img/icon-recruitment-arrow.png" alt="icon recruitment arrow"></figure>
-                                </a>
+                    <div class="recruitment-detail-left">
+                        <h1>Growth Consultant</h1>
+                        <ul class="recruitment-detail-infos">
+                            <li class="recruitment-detail-info">
+                                <h2>허들러스는 이런 회사에요</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                             </li>
-                            <li class="position-list">
-                                <a href="/recruitmentDetail.html" class="flex-b--c">
-                                    <span>Growth Engineer (신입 / 경력)</span>
-                                    <figure><img src="/public/img/icon-recruitment-arrow.png" alt="icon recruitment arrow"></figure>
-                                </a>
+                            <li class="recruitment-detail-info">
+                                <h2>입사하면 이런 일을 하게 됩니다.</h2>
+                                <ul class="portfolio-comparison-lists">
+                                    <li class="portfolio-comparison-list">생명·신체에 대한 피해</li> 
+                                    <li class="portfolio-comparison-list">생명·신체에 대한 피해</li>
+                                    <li class="portfolio-comparison-list">생명·신체에 대한 피해</li>
+                                    <li class="portfolio-comparison-list">생명·신체에 대한 피해</li>
+                                    <li class="portfolio-comparison-list">생명·신체에 대한 피해</li>
+                                </ul>
+                            </li>
+                            <li class="recruitment-detail-info">
+                                <h2>이런 경험이 있으면 좋아요.</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </li>
+                            <li class="recruitment-detail-info">
+                                <h2>입사 후 온보딩 프로세스</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                            </li>
+                            <li class="recruitment-detail-info">
+                                <h2>허들러스의 복지</h2>
+                                <ul class="portfolio-comparison-lists">
+                                    <li class="portfolio-comparison-list">생명·신체에 대한 피해</li> 
+                                    <li class="portfolio-comparison-list">생명·신체에 대한 피해</li>
+                                    <li class="portfolio-comparison-list">생명·신체에 대한 피해</li>
+                                    <li class="portfolio-comparison-list">생명·신체에 대한 피해</li>
+                                    <li class="portfolio-comparison-list">생명·신체에 대한 피해</li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
-                    <div class="recruitment-right">
-                        <figure><img src="/public/img/recruitment-right-img.png" alt="recruitment-right-img"></figure>
+                    <div class="recruitment-detail-right">
+                        <figure><img src="/public/img/recruitment-detail-right-img.png" alt="recruitment-detail-right-img"></figure>
                     </div>
                 </div>
-                <div class="recruitment-bottom">
-                    <h2>허들러스 멤버는 이런 성향이 중요합니다</h2>
-                    <ul class="qualification-lists">
-                        <li class="qualification-list">
-                            <figure><img src="/public/img/icon-qualification-1.png" alt="icon-qualification 1"></figure>
-                            <dl>
-                                <dt>직관력</dt>
-                                <dd>어떤 현상의 본질을 꿰뚫어보는 사람을 좋아합니다. 단순히 일을 하기전 이 일을 왜하는지를 생각하면서 일하는 사람을 중요시합니다.</dd>
-                            </dl>
-                        </li>
-                        <li class="qualification-list">
-                            <figure><img src="/public/img/icon-qualification-2.png" alt="icon-qualification 2"></figure>
-                            <dl>
-                                <dt>소통력</dt>
-                                <dd>고객과 동료에게 자신의 입장이나 감정을 잘 표현 할 수 있는 사람을 중요시합니다. 또 누군가에게 지식을 전달할때, 타인이 알기 쉽게 설명할 수 있는 능력이있어야합니다.</dd>
-                            </dl>
-                        </li>
-                        <li class="qualification-list">
-                            <figure><img src="/public/img/icon-qualification-3.png" alt="icon-qualification 3"></figure>
-                            <dl>
-                                <dt>새로운 지식</dt>
-                                <dd>그로스 마케팅 업계는 날이갈수록 발빠르게 바뀌고 있습니다. 환경이 변해도 뒤쳐지지않기위해, 새로운것에 대한 공부를 좋아하는 사람이 필요합니다.</dd>
-                            </dl>
-                        </li>
-                    </ul>
+                <div class="recruitment-detail-bottom">
+                    <h2>
+                        <figure><img src="/public/img/icon-exclamation.png" alt="icon-exclamation"></figure>
+                        지원제출방법
+                    </h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        <br><br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
                 </div>
             </div>
         </section>

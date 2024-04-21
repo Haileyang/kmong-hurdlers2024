@@ -286,11 +286,20 @@ footer .pdf-down{
     border: 1px solid #FF5400;
     border-radius: 5px;
     margin-top: 40px;
+    transition: all 0.3s;
 }
 footer .pdf-down.after-arrow::after {
     border-color: #FF5400;
     margin-bottom: -3px;
     margin-left: 10px;
+    transition: all 0.3s;
+}
+footer .pdf-down:hover{
+    background-color: #FF5400;
+    color: #fff;
+}
+footer .pdf-down:hover::after{
+    border-color: #fff;
 }
 footer .address{
     font-size: 16px;
@@ -328,7 +337,7 @@ footer .copy{
     font-weight: 600;
     margin: 10px 0 30px;
 }
-.footer-banner span{
+.footer-banner p span{
     font-size: 18px;
     display: block;
     font-weight: 400;
@@ -337,11 +346,22 @@ footer .copy{
 .footer-banner button.btn-white{
     display: inline-flex;
     align-items: center;
+    border: 1px solid #FF5400;
+    transition: all 0.3s;
 }
 .footer-banner button.btn-white::after{
     border-color: #FF5400;
     margin-left: 10px;
     margin-top: 8px;
+    transition: all 0.3s;
+}
+.footer-banner button:hover{
+    background: #FF5400;
+    color: #fff;
+    border-color: #fff;
+}
+.footer-banner button:hover::after{
+    border-color: #fff;
 }
 @media(max-width:900px){
     .footer-banner{

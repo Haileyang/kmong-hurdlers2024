@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교육 Page</title>
+    
+   <!-- Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    
+    <!-- Lib -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    
+    <!-- Custom  -->
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/common.css">
+    <link rel="stylesheet" href="/public/css/default.css">
+    <link rel="stylesheet" href="/public/css/sub.css">
+    <script defer src="/public/js/main.js"></script>
+</head>
+<body>
+   <header id="header" class="main-header">
+        <div class="inr">
+            <figure class="logo-wrap">
+                <a href="/index.html">
+                    <img src="/public/img/logo.png" alt=" 로고 | logo | 허들러스" class="logo">
+                </a>
+            </figure>
+            <div class="header-content flex-b--c">
+                <ul class="header-menus">
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Service</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/service/Ga4.html">GA4 완전 도입</a></li>
+                            <li class="header-sub-menu"><a href="/service/martechOnboarding.html">마테크 온보딩</a></li>
+                            <li class="header-sub-menu"><a href="/service/growthConsulting.html">그로스 컨설팅</a></li>
+                            <li class="header-sub-menu"><a href="/service/dashboard.html">통합 대시보드 구축</a></li>
+                            <li class="header-sub-menu"><a href="/service/education.html">교육 및 트레이닝</a></li>
+                            <li class="header-sub-menu"><a href="/service/martechMaintenance.html">마테크 유지보수</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu"><a href="/portfolio.html">Portfolio</a></li>
+                    <li class="header-menu"><a href="/caseStudy.html">Case Study</a></li>
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Resources</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/resource/blog.html">Blog / News</a></li>
+                            <li class="header-sub-menu"><a href="/resource/resource.html">자료실</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Company</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/company/aboutUs.html">About Us</a></li>
+                            <li class="header-sub-menu"><a href="/company/recruitment.html">Recruitment</a></li>
+                            <li class="header-sub-menu"><a href="/company/contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn-orange">
+                    <a href="/company/contact.html">티타임 신청</a>
+                </button>
+            </div>
+            <div class="mobile-menu-btn pc-hidden" onclick="mobileBtnHandler()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <span class="header-bg">
+            <div class="inr">
+                <ul class="header-menu-previews">
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Service</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Portfolio</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Case Study</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Resources</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Company</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </span>
+    </header>
+    <main>
+        <section id="sub-visual" class="service">
+            <div class="inr">
+                <div class="service-visual-txt">
+                    <h1 class="sub-visual-tit">이미 검증받은 허들러스의 교육</h1>
+                    <p>단순한 정보 전달이 아닌 스스로 할 수 있게 교육을 합니다.</p>
+                </div>
+                <ul class="flex-lists">
+                    <li class="flex-list w65">
+                        <figure><img src="/public/img/visual-edu-img01.png" alt="visual-edu-img01"></figure>
+                        <dl>
+                            <dt>대한민국 주요 실무 교육 기관과의 협업</dt>
+                            <dd>
+                                허들러스는 패스트캠퍼스, 러닝스푼즈, 인프런, 코드스테이츠 등 국내에서 가장 우수한 교육기관에서 강의를 운영하고 
+                                있습니다.
+                                <br><br>
+                                뿐만 아니라 높은 만족도 평가를 받고 있는 교육 프로그램을 
+                                운영중에 있습니다.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="flex-list w35">
+                        <dl>
+                            <dt>기초부터 활용까지</dt>
+                            <dd>
+                                실무에 활용하기 위해서는 탄탄한 기초가 필요합니다. 
+                                <br><br>
+                                시간은 많이 걸릴 수 있지만 가장 기본적인 용어부터 
+                                실무 활용 케이스 스터디까지의 전 과정을 
+                                허들러스에서 다룹니다.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="flex-list w35">
+                        <dl>
+                            <dt>디지털 마케팅 실무는 허들러스의 교육입니다.</dt>
+                            <dd>
+                                지루한 이론만을 다루지 않고 이야기식으로
+                                구성하여 기초 배경을 설명합니다. 
+                                <br><br>
+                                활용할 수 없다면 무의미합니다. 
+                                <br><br>
+                                모든 지식이 아닌 실무에 꼭 필요한 지식들만을 다룹니다.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="flex-list w65">
+                        <figure><img src="/public/img/visual-edu-img01.png" alt="visual-edu-img01"></figure>
+                        <dl>
+                            <dt>다양한 기업과의 B2B 협업</dt>
+                            <dd>
+                                교육 브랜드 뿐만 아니라 많은 기업들의 출강을 나가 B2B로 
+                                맞춤형 강의를 제공하고 있습니다. 
+                                <br><br>
+                                실제 높은 만족도를 통해 많은 기업들과 함께 협업하여 지속적인 인연을 이어나가고 있습니다.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="flex-list w65">
+                        <figure><img src="/public/img/visual-edu-img01.png" alt="visual-edu-img01"></figure>
+                        <dl>
+                            <dt>직접 구축하고 이를 강의로 만듭니다.</dt>
+                            <dd>
+                                허들러스는 강의만 하지는 않습니다. 
+                                <br><br>
+                                실제 고객들의 데이터 컨설팅과 구축을 도우면서 쌓인 많은 
+                                노하우와 레퍼런스를 가지고 강의 컨텐츠를 제작합니다. 
+                                <br><br>
+                                실무를 하면서 잘 가르칠 수 있는 교육은 잘 없습니다. 실무와 이론이 적절히 혼합된 허들러스의 교육을 만나보세요.
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="flex-list w35">
+                        <dl>
+                            <dt>디지털 마케팅에 필요한 강의는 무엇이든 !</dt>
+                            <dd>
+                                데이터 분석, 퍼포먼스 마케팅, CRM, CDP, SEO, MMP 등 
+                                디지털 환경에서 비즈니스를 성장시키기 위해서는 많은 
+                                분야의 지식이 필요합니다. 
+                                <br><br>
+                                허들러스는 실제 그로스컨설팅을 진행하면서 얻은 경험을 
+                                통해 넓은 커버리지의 필요한 맞춤형 강의를 전달합니다.
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="education" class="service-section">
+            <section class="education-section-01">
+                <div class="">
+                    <div class="service-section-txt">
+                        <h2 class="font-50">그 밖의 허들러스 다른 교육</h2>
+                    </div>  
+                    <!-- Swiper -->
+                    <div class="edu-swiper-wrap">
+                        <div class="swiper eduSwiper inr">
+                            <div class="swiper-wrapper edu-lists">
+                                <div class="swiper-slide edu-list">
+                                    <div class="edu-list-wrap">
+                                        <div class="edu-thumb-wrap">
+                                            <figure class="edu-thumb"><img src="/public/img/edu-thumb.jpg" alt="edu-thumb"></figure>
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">B2B</li>
+                                            </ul>
+                                        </div>
+                                        <div class="edu-content">
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">구글 애널리틱스</li>
+                                            </ul>
+                                            <h3>우리 회사 맞춤형 GA4 강의</h3>
+                                            <div class="edu-detail">
+                                                <dl>
+                                                    <dt>난이도</dt>
+                                                    <dd>
+                                                        <ul class="star-lists">
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>소요시간</dt>
+                                                    <dd>약 3시간</dd>
+                                                </dl>
+                                            </div>
+                                            <dl>
+                                                <dt>수강자</dt>
+                                                <dd>마케터, UX디자이너, 개발자</dd>
+                                            </dl>
+                                            <div class="edu-more">
+                                                <button class="btn-orange">신청하기</button>
+                                                <span class="edu-cur">
+                                                    <a href="">자세히 보러가기</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide edu-list">
+                                    <div class="edu-list-wrap">
+                                        <div class="edu-thumb-wrap">
+                                            <figure class="edu-thumb"><img src="/public/img/edu-thumb.jpg" alt="edu-thumb"></figure>
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">B2B</li>
+                                                <li class="edu-category">교육학원</li>
+                                            </ul>
+                                        </div>
+                                        <div class="edu-content">
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">구글 애널리틱스</li>
+                                                <li class="edu-category">구글 태그매니저</li>
+                                                <li class="edu-category">빅쿼리</li>
+                                                <li class="edu-category">루커 스튜디오</li>
+                                            </ul>
+                                            <h3>설계부터 세팅까지 GA4 완전 마스터 강의</h3>
+                                            <div class="edu-detail">
+                                                <dl>
+                                                    <dt>난이도</dt>
+                                                    <dd>
+                                                        <ul class="star-lists">
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>소요시간</dt>
+                                                    <dd>약 15시간</dd>
+                                                </dl>
+                                            </div>
+                                            <dl>
+                                                <dt>수강자</dt>
+                                                <dd>마케터, UX디자이너, 개발자</dd>
+                                            </dl>
+                                            <div class="edu-more">
+                                                <button class="btn-orange">신청하기</button>
+                                                <span class="edu-cur">
+                                                    <a href="">자세히 보러가기</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide edu-list">
+                                    <div class="edu-list-wrap">
+                                        <div class="edu-thumb-wrap">
+                                            <figure class="edu-thumb"><img src="/public/img/edu-thumb.jpg" alt="edu-thumb"></figure>
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">B2B</li>
+                                                <li class="edu-category">교육학원</li>
+                                            </ul>
+                                        </div>
+                                        <div class="edu-content">
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">구글 애널리틱스</li>
+                                                <li class="edu-category">구글 태그매니저</li>
+                                                <li class="edu-category">파이어베이스</li>
+                                            </ul>
+                                            <h3>로그 데이터 파이프라인 설계부터 구축까지</h3>
+                                            <div class="edu-detail">
+                                                <dl>
+                                                    <dt>난이도</dt>
+                                                    <dd>
+                                                        <ul class="star-lists">
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>소요시간</dt>
+                                                    <dd>약 3시간</dd>
+                                                </dl>
+                                            </div>
+                                            <dl>
+                                                <dt>수강자</dt>
+                                                <dd>개발자</dd>
+                                            </dl>
+                                            <div class="edu-more">
+                                                <button class="btn-orange">신청하기</button>
+                                                <span class="edu-cur">
+                                                    <a href="">자세히 보러가기</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide edu-list">
+                                    <div class="edu-list-wrap">
+                                        <div class="edu-thumb-wrap">
+                                            <figure class="edu-thumb"><img src="/public/img/edu-thumb.jpg" alt="edu-thumb"></figure>
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">B2C</li>
+                                                <li class="edu-category">B2B</li>
+                                                <li class="edu-category">교육학원</li>
+                                            </ul>
+                                        </div>
+                                        <div class="edu-content">
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">페이스북</li>
+                                            </ul>
+                                            <h3>페이스북 퍼포먼스 마케팅 기초</h3>
+                                            <div class="edu-detail">
+                                                <dl>
+                                                    <dt>난이도</dt>
+                                                    <dd>
+                                                        <ul class="star-lists">
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>소요시간</dt>
+                                                    <dd>약 5시간</dd>
+                                                </dl>
+                                            </div>
+                                            <dl>
+                                                <dt>수강자</dt>
+                                                <dd>학생, 초심자</dd>
+                                            </dl>
+                                            <div class="edu-more">
+                                                <button class="btn-orange">신청하기</button>
+                                                <span class="edu-cur">
+                                                    <a href="">자세히 보러가기</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide edu-list">
+                                    <div class="edu-list-wrap">
+                                        <div class="edu-thumb-wrap">
+                                            <figure class="edu-thumb"><img src="/public/img/edu-thumb.jpg" alt="edu-thumb"></figure>
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">B2C</li>
+                                                <li class="edu-category">B2B</li>
+                                                <li class="edu-category">교육학원</li>
+                                            </ul>
+                                        </div>
+                                        <div class="edu-content">
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">페이스북</li>
+                                            </ul>
+                                            <h3>페이스북 퍼포먼스 마케팅 심화</h3>
+                                            <div class="edu-detail">
+                                                <dl>
+                                                    <dt>난이도</dt>
+                                                    <dd>
+                                                        <ul class="star-lists">
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>소요시간</dt>
+                                                    <dd>약 5시간</dd>
+                                                </dl>
+                                            </div>
+                                            <dl>
+                                                <dt>수강자</dt>
+                                                <dd>마케터, 대행사</dd>
+                                            </dl>
+                                            <div class="edu-more">
+                                                <button class="btn-orange">신청하기</button>
+                                                <span class="edu-cur">
+                                                    <a href="">자세히 보러가기</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide edu-list">
+                                    <div class="edu-list-wrap">
+                                        <div class="edu-thumb-wrap">
+                                            <figure class="edu-thumb"><img src="/public/img/edu-thumb.jpg" alt="edu-thumb"></figure>
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">B2C</li>
+                                                <li class="edu-category">B2B</li>
+                                                <li class="edu-category">교육학원</li>
+                                            </ul>
+                                        </div>
+                                        <div class="edu-content">
+                                            <ul class="edu-categories">
+                                                <li class="edu-category">앱스플라이어</li>
+                                                <li class="edu-category">에어브릿지</li>
+                                                <li class="edu-category">애드브릭스</li>
+                                            </ul>
+                                            <h3>MMP의 원리와 성과분석 기초</h3>
+                                            <div class="edu-detail">
+                                                <dl>
+                                                    <dt>난이도</dt>
+                                                    <dd>
+                                                        <ul class="star-lists">
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                            <li class="star-list">
+                                                                <img src="/public/img/icon-star-fill.png" alt="icon-star-fill">
+                                                            </li>
+                                                        </ul>
+                                                    </dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>소요시간</dt>
+                                                    <dd>약 6시간</dd>
+                                                </dl>
+                                            </div>
+                                            <dl>
+                                                <dt>수강자</dt>
+                                                <dd>학생, 초심자</dd>
+                                            </dl>
+                                            <div class="edu-more">
+                                                <button class="btn-orange">신청하기</button>
+                                                <span class="edu-cur">
+                                                    <a href="">자세히 보러가기</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-paginations">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="education-section-02 bg-grey">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-45">수많은 교육 업체에서 이미 검증된 강의</h2>
+                        <p>허들러스가 실제 진행한 고객사 입니다.</p>
+                    </div>  
+                    <ul class="logo-lists">
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-lguplus.png" alt="lguplus"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-samsungcorporation.png" alt="samsungcorporation"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-koreatourism.png" alt="koreatourism"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-eland.png" alt="eland"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-aic.png" alt="aic"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-hankook.png" alt="hankook"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-handok.png" alt="handok"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-hunet.png" alt="hunet"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-hyundai.png" alt="hyundai"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-naverconnect.png" alt="naverconnect"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-megazone.png" alt="megazone"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-shinhan.png" alt="shinhan"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-sejung.png" alt="sejung"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-kookminuni.png" alt="kookminuni"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-ehwauni.png" alt="ehwauni"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-dankookuni.png" alt="dankookuni"></figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="education-section-03 pt-0 pb-0">
+                <!-- Swiper -->
+                <div class="review-swiper-wrap">
+                    <div class="swiper reviewSwiper">
+                        <div class="swiper-wrapper review-lists">
+                            <div class="swiper-slide review-list">
+                                <div class="review-list-wrap">
+                                    <figure>
+                                        <img src="/public/img/review-thumb.jpg" alt="review-thumb">
+                                        <dl>
+                                            <dt>무브 변선의님</dt>
+                                            <dd>마케팅 담당자</dd>
+                                        </dl>
+                                    </figure>
+                                    <div class="review-content">
+                                        <dl>
+                                            <dt>온보딩 컨설팅 덕에 처음 앱을 런칭함에도<br>명확한 지표 정의가 가능했습니다.</dt>
+                                            <dd>상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide review-list">
+                                <div class="review-list-wrap">
+                                    <figure>
+                                        <img src="/public/img/review-thumb.jpg" alt="review-thumb">
+                                        <dl>
+                                            <dt>무브 변선의님</dt>
+                                            <dd>마케팅 담당자</dd>
+                                        </dl>
+                                    </figure>
+                                    <div class="review-content">
+                                        <dl>
+                                            <dt>온보딩 컨설팅 덕에 처음 앱을 런칭함에도<br>명확한 지표 정의가 가능했습니다.</dt>
+                                            <dd>상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-paginations">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="education-section-04">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-50">관련기사</h2>
+                    </div>  
+                    <ul class="news-lists">
+                        <li class="news-list">
+                            <a href="https://www.busaneconomy.com/news/articleView.html?idxno=302219" target="_blank">
+                                <figure class="news-thumb"><img src="/public/img/news-01-thumb.jpg" alt="news-01-thumb"></figure>
+                                <dl>
+                                    <dt>[허들러스 유성민 대표, LG유플러스에서 GA4 강의 열어</dt>
+                                    <dd>
+                                        데이터분석 컨설팅 컴퍼니 허들러스의 유성민 대표가 LG유플러스에서 강의를 진행했다고 14일 밝혔다.러닝스푼즈와 함께 
+                                    </dd>
+                                    <dd>2023.06.14</dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li class="news-list">
+                            <a href="https://www.bloter.net/news/articleView.html?idxno=603587" target="_blank">
+                                <figure class="news-thumb"><img src="/public/img/news-02-thumb.jpg" alt="news-02-thumb"></figure>
+                                <dl>
+                                    <dt>유성민 허들러스 대표 "돈 안 쓰고 GA4로 마케팅합시다" [블로터 CMTS 2023 현장]</dt>
+                                    <dd>
+                                        유니버셜 애널리틱스(UA)는 가이드 라인에 맞게 분석하는 것이라면 GA4는 '너희가 뭘 좋아할지 몰라서 다 준비했다'고 할
+                                    </dd>
+                                    <dd>2023.07.05</dd>
+                                </dl>
+                            </a>
+                        </li>
+                        <li class="news-list">
+                            <a href="https://zdnet.co.kr/view/?no=20220530110151" target="_blank">
+                                <figure class="news-thumb"><img src="/public/img/news-03-thumb.jpg" alt="news-03-thumb"></figure>
+                                <dl>
+                                    <dt>유성민 허들러스 대표 "데이터만큼 심리적 요소 연구해야"</dt>
+                                    <dd>
+                                        직장인 커뮤니티 청년마케터(헤드디렉터 박윤찬)가 대한민국 혁신성장 1번지 마포구 프론트원에서 마케터 실무자를 대상 
+                                    </dd>
+                                    <dd>2022. 05. 30</dd>
+                                </dl>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </main>
+    <section class="footer-banner">
+        <div class="inr">
+            <p>
+                <span>간단한 티타임도 괜찮습니다.</span>
+                문의사항을 남겨주시면 <br>24시간 내로 연락드립니다.
+            </p>
+            <button class="btn-white after-arrow right">
+                <span>
+                    <a href="/company/contact.html">서비스 문의하기</a>
+                </span>
+            </button>
+        </div>
+    </section>
+    <footer>
+        <div class="inr">
+            <figure class="logo-wrap">
+                <a href="/index.html">
+                    <img src="/public/img/f-logo.png" alt=" 로고 | logo | 허들러스" class="logo">
+                </a>
+            </figure>
+            <p class="address">
+                서울 광진구 아차산로51길 65, 2층
+                <br>사업자 등록번호 : 660-46-00794 | team@hurdlers.kr | <br class="pc-hidden"> 대표이사. 유성민
+            </p>
+            <p class="copy">© 2024 by Hurdlers</p>
+            <span class="pdf-down after-arrow right"><a href="/profile.pdf" download>회사소개서 다운로드</a></span>
+        </div>
+    </footer>
+    <script>
+        // swiper
+        var swiper = new Swiper(".reviewSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".reviewSwiper .swiper-button-next",
+                prevEl: ".reviewSwiper .swiper-button-prev",
+            },
+        });
+        // swiper
+        var swiper = new Swiper(".eduSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".edu-swiper-wrap .swiper-button-next",
+                prevEl: ".edu-swiper-wrap .swiper-button-prev",
+            },
+            breakpoints: {
+                300: {
+                    slidesPerView: 1.05,
+                    spaceBetween: 5,
+                },
+                767: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                900: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그로스 컨설팅 Page</title>
+    
+   <!-- Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    
+    <!-- Lib -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    
+    <!-- Custom  -->
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/common.css">
+    <link rel="stylesheet" href="/public/css/default.css">
+    <link rel="stylesheet" href="/public/css/sub.css">
+    <script defer src="/public/js/main.js"></script>
+</head>
+<body>
+   <header id="header" class="main-header">
+        <div class="inr">
+            <figure class="logo-wrap">
+                <a href="/index.html">
+                    <img src="/public/img/logo.png" alt=" 로고 | logo | 허들러스" class="logo">
+                </a>
+            </figure>
+            <div class="header-content flex-b--c">
+                <ul class="header-menus">
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Service</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/service/Ga4.html">GA4 완전 도입</a></li>
+                            <li class="header-sub-menu"><a href="/service/martechOnboarding.html">마테크 온보딩</a></li>
+                            <li class="header-sub-menu"><a href="/service/growthConsulting.html">그로스 컨설팅</a></li>
+                            <li class="header-sub-menu"><a href="/service/dashboard.html">통합 대시보드 구축</a></li>
+                            <li class="header-sub-menu"><a href="/service/education.html">교육 및 트레이닝</a></li>
+                            <li class="header-sub-menu"><a href="/service/martechMaintenance.html">마테크 유지보수</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu"><a href="/portfolio.html">Portfolio</a></li>
+                    <li class="header-menu"><a href="/caseStudy.html">Case Study</a></li>
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Resources</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/resource/blog.html">Blog / News</a></li>
+                            <li class="header-sub-menu"><a href="/resource/resource.html">자료실</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Company</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/company/aboutUs.html">About Us</a></li>
+                            <li class="header-sub-menu"><a href="/company/recruitment.html">Recruitment</a></li>
+                            <li class="header-sub-menu"><a href="/company/contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn-orange">
+                    <a href="/company/contact.html">티타임 신청</a>
+                </button>
+            </div>
+            <div class="mobile-menu-btn pc-hidden" onclick="mobileBtnHandler()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <span class="header-bg">
+            <div class="inr">
+                <ul class="header-menu-previews">
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Service</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Portfolio</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Case Study</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Resources</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Company</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </span>
+    </header>
+    <main>
+        <section id="sub-visual" class="service service01">
+            <div class="inr">
+                <div class="service-visual-txt">
+                    <h1 class="sub-visual-tit">그로스 마케팅이 무엇인지는 알겠는데 <br> 막상 하려니 어렵다면?</h1>
+                    <p>허들러스의 그로스 마케팅 팀을 고용하세요.</p>
+                </div>
+                <ul class="growth-visual-lists">
+                    <li class="growth-visual-list">
+                        <figure><img src="/public/img/growth-visual-img01.png" alt="growth-visual-img01"></figure>
+                        <strong>그로스 구현을 위한 전문 개발팀 보유</strong>
+                    </li>
+                    <li class="growth-visual-list">
+                        <figure><img src="/public/img/growth-visual-img02.png" alt="growth-visual-img02"></figure>
+                        <strong>숫자로 증명한 컨설팅 결과</strong>
+                    </li>
+                    <li class="growth-visual-list">
+                        <figure><img src="/public/img/growth-visual-img03.png" alt="growth-visual-img03"></figure>
+                        <strong>타사의 그로스 마케팅 사례 보유</strong>
+                    </li>
+                </ul>
+                <button class="btn-orange after-arrow right">
+                    <a href="">서비스 소개서</a>
+                </button> 
+            </div>
+        </section>
+        <section id="growthConsulting" class="service-section">
+            <section class="growthConsulting-section-01">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-50">허들러스의 컨설팅은 중요한 원칙이 있습니다.</h2>
+                    </div>  
+                    <ul class="principle-lists">
+                        <li class="principle-list">
+                            <small>1원칙</small>
+                            <dl>
+                                <dt>할수 있는것과 할수 없는 것을 
+                                    <br>잘 분류해야합니다.
+                                </dt>
+                                <dd>
+                                    <strong>이론과 현실</strong>
+                                </dd>
+                                <dd>
+                                    모든 이상적인 마케팅 방법론은 존재하지만, 
+                                    정말 성과를 내기위해서는 주어진 제약 조건 내에서 
+                                    할 수 있는것을 찾아야합니다.
+                                    <br><br>
+                                    가지고 있는 자원내에서 최대한의 가치를 
+                                    만들어냅니다.
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="principle-list">
+                            <small>2원칙</small>
+                            <dl>
+                                <dt>수제화를 만들듯이,<br> 
+                                    비즈니스에 맞는 데이터 기반 
+                                    그로스 전략을 제공합니다.
+                                </dt>
+                                <dd>
+                                    <strong>커스텀 서비스</strong>
+                                </dd>
+                                <dd>
+                                    같은 업종이라도 비즈니스가 처한 상황이나 현재가 
+                                    모두 다 다릅니다. 컨설팅 서비스는 체계화된 
+                                    시스템이 없습니다.
+                                    <br><br>
+                                    업종의 현재 상태에 맞게 디지털 환경에서 최대의
+                                    효율을 만들어낼 수 있는 커스텀 전략을 기획합니다.
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="principle-list">
+                            <small>3원칙</small>
+                            <dl>
+                                <dt>데이터를 다루는 회사이지만,<br>
+                                    데이터가 전부라고 생각하지 
+                                    않습니다.
+                                </dt>
+                                <dd>
+                                    <strong>숫자 뒤를 너머</strong>
+                                </dd>
+                                <dd>
+                                    데이터는 결과입니다. 가설을 수립하고 전략을 
+                                    기획하는것은 여전히 인간의 영역입니다.
+                                    <br><br>
+                                    허들러스는 데이터를 다루는 그로스 컨설팅 팀이지만, 데이터가 전부라고 생각하지 않습니다.
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="growthConsulting-section-02 pb-0">
+                <div class="service-section-txt">
+                    <h2 class="font-45">컨설팅 만으로도 <br>이미 수차례 성과를 만들어냈습니다.</h2>
+                </div>
+                <!-- Swiper -->
+                <div class="review-swiper-wrap">
+                    <div class="swiper reviewSwiper">
+                        <div class="swiper-wrapper review-lists">
+                            <div class="swiper-slide review-list">
+                                <div class="review-list-wrap">
+                                    <figure>
+                                        <img src="/public/img/review-thumb.jpg" alt="review-thumb">
+                                        <dl>
+                                            <dt>무브 변선의님</dt>
+                                            <dd>마케팅 담당자</dd>
+                                        </dl>
+                                    </figure>
+                                    <div class="review-content">
+                                        <dl>
+                                            <dt>온보딩 컨설팅 덕에 처음 앱을 런칭함에도<br>명확한 지표 정의가 가능했습니다.</dt>
+                                            <dd>상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide review-list">
+                                <div class="review-list-wrap">
+                                    <figure>
+                                        <img src="/public/img/review-thumb.jpg" alt="review-thumb">
+                                        <dl>
+                                            <dt>무브 변선의님</dt>
+                                            <dd>마케팅 담당자</dd>
+                                        </dl>
+                                    </figure>
+                                    <div class="review-content">
+                                        <dl>
+                                            <dt>온보딩 컨설팅 덕에 처음 앱을 런칭함에도<br>명확한 지표 정의가 가능했습니다.</dt>
+                                            <dd>상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-paginations">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="growthConsulting-section-03 bg-grey">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-50">허들러스의 컨설팅 시스템</h2>
+                    </div>
+                    <ul class="consulting-systems">
+                        <li class="consulting-system">
+                            <strong>Basic</strong>
+                            <dl>
+                                <dt>1개월 소요</dt>
+                                <dd>최초 설문 이후<br>
+                                    방향성을 명확하게 정의합니다.
+                                </dd>
+                            </dl>
+                            <ul>
+                                <li>비즈니스 상태 진단</li>
+                                <li>AARRR 우선 순위 정립</li>
+                                <li>각종 필요 툴 도입 추천</li>
+                                <li>마케팅 예산 수립</li>
+                                <li>리드퍼널 설계</li>
+                            </ul>
+                        </li>
+                        <li class="consulting-system">
+                            <strong>Advanced</strong>
+                            <dl>
+                                <dt>3개월 소요</dt>
+                                <dd>최초 설문 이후<br>
+                                    특정 지점을 함께 해결합니다.
+                                </dd>
+                            </dl>
+                            <ul>
+                                <li>1회 컨설팅 영역 포함</li>
+                                <li>LMF / PMF 검증</li>
+                                <li>SEO / ASO</li>
+                                <li>A/B Test, UX 개선</li>
+                                <li>미디어 믹스</li>
+                                <li>CRM</li>
+                            </ul>
+                        </li>
+                        <li class="consulting-system">
+                            <strong>Premium</strong>
+                            <dl>
+                                <dt>6개월 소요</dt>
+                                <dd>최초 설문 이후<br>
+                                    방향성을 명확하게 정의합니다.
+                                </dd>
+                            </dl>
+                            <ul>
+                                <li>비즈니스 상태 진단</li>
+                                <li>AARRR 우선 순위 정립</li>
+                                <li>각종 필요 툴 도입 추천</li>
+                                <li>마케팅 예산 수립</li>
+                                <li>리드퍼널 설계</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="growthConsulting-section-04">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-45">컨설팅의 목표는 내재화입니다.</h2>
+                        <p>허들러스와 함께 그로스 마케팅 루프를 돌 수 있는 실무자가 있어야 합니다.</p>
+                    </div>
+                    <ul class="consulting-goals">
+                        <li class="consulting-goal">
+                            <h3>
+                                <small>01</small>
+                                타사의 성공사례를 <br>이미 많이 가지고 있습니다.
+                            </h3>
+                            <ul class="consulting-inr-goals">
+                                <li class="consulting-inr-goal">
+                                    <figure><img src="/public/img/icon-check-circle.png" alt="icon-check-circle"></figure>
+                                    M사 ROAS 1000% 이상 확보
+                                </li>
+                                <li class="consulting-inr-goal">
+                                    <figure><img src="/public/img/icon-check-circle.png" alt="icon-check-circle"></figure>
+                                    보안 솔루션 G사 같은 광고비로 매출 2배이상 상승
+                                </li>
+                                <li class="consulting-inr-goal">
+                                    <figure><img src="/public/img/icon-check-circle.png" alt="icon-check-circle"></figure>
+                                    수면앱 M사 CPA 4배 상승
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="consulting-goal">
+                            <h3>
+                                <small>02</small>
+                                전략 기획을 위한 <br>수많은 템플릿 자료가 있습니다.
+                            </h3>
+                            <ul class="consulting-inr-goals double-column">
+                                <li class="consulting-inr-goal">
+                                    <figure><img src="/public/img/icon-book.png" alt="icon-book"></figure>
+                                    A/B TEST Framework
+                                </li>
+                                <li class="consulting-inr-goal">
+                                    <figure><img src="/public/img/icon-book.png" alt="icon-book"></figure>
+                                    CRM 기획
+                                </li>
+                                <li class="consulting-inr-goal">
+                                    <figure><img src="/public/img/icon-book.png" alt="icon-book"></figure>
+                                    텍소노미
+                                </li>
+                                <li class="consulting-inr-goal">
+                                    <figure><img src="/public/img/icon-book.png" alt="icon-book"></figure>
+                                    키워드 관리도구
+                                </li>
+                                <li class="consulting-inr-goal">
+                                    <figure><img src="/public/img/icon-book.png" alt="icon-book"></figure>
+                                    컨텐츠 기획 프레임
+                                </li>
+                                <li class="consulting-inr-goal">
+                                    <figure><img src="/public/img/icon-book.png" alt="icon-book"></figure>
+                                    통합 성과분석 대시보드
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="consulting-goal">
+                            <h3>
+                                <small>03</small>
+                                상황에 따라 알맞은 <br>시나리오 방법론이 있습니다.
+                            </h3>
+                            <figure><img src="/public/img/senario-img.png" alt="senario-img"></figure>
+                        </li>
+                        <li class="consulting-goal">
+                            <h3>
+                                <small>04</small>
+                                품질관리를 위해 컨설팅을 <br>동시 5개사만 관리합니다.
+                            </h3>
+                            <div>
+                                <p>하나의 프로젝트에 많은 인력이 들어가기 때문입니다.</p>
+                                <ul class="consulting-inr-goals double-column">
+                                    <li class="consulting-inr-goal">
+                                        <figure><img src="/public/img/icon-person.png" alt="icon-person"></figure>
+                                        그로스 컨설턴트
+                                    </li>
+                                    <li class="consulting-inr-goal">
+                                        <figure><img src="/public/img/icon-person.png" alt="icon-person"></figure>
+                                        마케팅 전문가
+                                    </li>
+                                    <li class="consulting-inr-goal">
+                                        <figure><img src="/public/img/icon-person.png" alt="icon-person"></figure>
+                                        데이터 엔지니어
+                                    </li>
+                                    <li class="consulting-inr-goal">
+                                        <figure><img src="/public/img/icon-person.png" alt="icon-check-circle"></figure>
+                                        그로스 엔지니어
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="growthConsulting-section-05 bg-grey">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="process font-orange">PROCESS</h2>
+                        <p>규모별, 업종별, 단계별로 업무의 우선순위가 다릅니다.</p>
+                    </div>
+                    <figure><img src="/public/img/process-img.png" alt="process-img"></figure>
+                </div>
+            </section>
+        </section>
+    </main>
+    <section class="footer-banner">
+        <div class="inr">
+            <p>
+                <span>간단한 티타임도 괜찮습니다.</span>
+                문의사항을 남겨주시면 <br>24시간 내로 연락드립니다.
+            </p>
+            <button class="btn-white after-arrow right">
+                <span>
+                    <a href="/company/contact.html">서비스 문의하기</a>
+                </span>
+            </button>
+        </div>
+    </section>
+    <footer>
+        <div class="inr">
+            <figure class="logo-wrap">
+                <a href="/index.html">
+                    <img src="/public/img/f-logo.png" alt=" 로고 | logo | 허들러스" class="logo">
+                </a>
+            </figure>
+            <p class="address">
+                서울 광진구 아차산로51길 65, 2층
+                <br>사업자 등록번호 : 660-46-00794 | team@hurdlers.kr | <br class="pc-hidden"> 대표이사. 유성민
+            </p>
+            <p class="copy">© 2024 by Hurdlers</p>
+            <span class="pdf-down after-arrow right"><a href="/profile.pdf" download>회사소개서 다운로드</a></span>
+        </div>
+    </footer>
+    <script>
+        // swiper
+        var swiper = new Swiper(".reviewSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".reviewSwiper .swiper-button-next",
+                prevEl: ".reviewSwiper .swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
