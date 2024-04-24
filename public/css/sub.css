@@ -1651,6 +1651,9 @@
 .service01{
     background-image: url(/public/img/service-visual-01.jpg);
 }
+.service02{
+    background-image: url(/public/img/service-visual-02.jpg);
+}
 .service-visual-txt {
     margin-bottom: 100px;
 }
@@ -1697,8 +1700,8 @@
     gap: 60px;
 }
 .three-circle span{
-    width: 15vw;
-    height: 15vw;
+    width: 13vw;
+    height: 13vw;
     background: rgba(224,225,225,0.1);
     text-align: center;
     border-radius: 50%;
@@ -1911,7 +1914,7 @@
 .swiper-paginations{
     position: absolute;
     width: 95%;
-    max-width: 1600px;
+    max-width: 1400px;
     left: 50%;
     transform: translateX(-50%);
     top: 65%;
@@ -1938,7 +1941,9 @@
     transform: translate(-50%,-50%);
 }
 .edu-swiper-wrap .swiper-button-next:after, 
-.edu-swiper-wrap .swiper-button-prev:after{
+.edu-swiper-wrap .swiper-button-prev:after,
+.card-swiper-wrap .swiper-button-next:after, 
+.card-swiper-wrap .swiper-button-prev:after{
     background-image: url(/public/img/swiper-arror-fill.png);
 }
 .bg-grey{
@@ -2095,7 +2100,7 @@
     border-radius: 10px;
 }
 .edu-lists{
-    padding: 20px 0;
+    padding: 20px;
 }
 .edu-list{
     border-radius: 10px;
@@ -2112,6 +2117,9 @@
     right: 11px;top: 13px;
     display: flex;
     gap: 5px;
+}
+.edu-categories::-webkit-scrollbar{
+    display: none;
 }
 .edu-thumb-wrap .edu-category{
     padding: 6px 10px;
@@ -2185,6 +2193,205 @@
     color: #888;
     margin-left: 20px;
     display: block;
+}
+.martechOnboarding-section-02{
+    background-color: #FF5400;
+    padding: 50px 0 70px 0!important;
+}
+.martechOnboarding-section-02 .flex-b--c{
+    gap: 30px;
+}
+.martechOnboarding-section-02 h3{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.martechOnboarding-section-02 p{
+    font-size: 18px;
+    color: #fff
+}
+.martechOnboarding-section-02 .more{
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+.martechOnboarding-section-02 .more::after{
+    content:"";
+    width: 300px;
+    height: 32px;
+    display: block;
+    background-image: url(/public/img/long-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 254px 32px;
+    background-position: 0 0;
+}
+.martechOnboarding-section-02 .more::before{
+    content: "";
+    width: 100px;
+    height: 100px;
+    border: 1px solid #fff;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;top: 60%;
+    transform: translateY(-45%);
+}
+.after-consulting-lists{
+    display: flex;
+    gap: 20px;
+}
+.after-consulting-list{
+    flex: 1;
+    text-align: center;
+}
+.after-consulting-list small{
+    display: block;
+    padding: 11px;
+    width: 100%;
+    background-color: #666;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.after-consulting-list img{
+    width: 100%;
+    max-height: 256px;
+    object-fit: cover;
+    border-radius: 10px ;
+}
+.card-lists{
+    padding: 20px;
+}
+.card-swiper-wrap{
+    position: relative;
+    padding: 0 20px;
+    overflow: hidden;
+}
+.card-swiper-wrap .swiper-paginations{
+    top: 50%;
+}
+.card-list{
+    background-color: #eee;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgba(224,225,225,0.5);
+    padding: 35px 40px;
+}
+.card-list small{
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 15px;
+    background-color: #FF5400;
+    border-radius: 30px;
+    padding: 5px 15px;
+    border: 1px solid #FF5400;
+}
+.card-list .portfolio-more:hover path{
+    fill: #fff;
+}
+.card-list .card-front h3{
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+.card-list .card-back p{
+    font-size: 25px;
+    color: #fff;
+}
+.card-list .card-back .more{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px 10px;
+    position: relative;
+}
+.card-list .card-back .more::after{
+    border-color: #fff;
+    margin-bottom: -2px;
+    margin-left: 10px;
+}
+.card-list .card-back .more::before{
+    content:"";
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 0;bottom: 0;
+}
+.card-list .portfolio-more{
+    background-color:transparent;
+}
+.card-list .card-back{
+    display: none;
+}
+.card-list{
+    height: 416px;
+    max-height: 416px;
+    min-height: 416px;
+}
+.card-lists-typeA .card-list:hover {
+    background-color: #FF5400;
+}
+.card-lists-typeA .card-list:hover small{
+    border-color: #fff;
+}
+.card-lists-typeA .card-list:hover .card-back{
+    display: block;
+}
+.card-lists-typeA .card-list:hover .card-front{
+    display: none;
+}
+.swiper-pagination-bullet{
+    width: 10px;height: 10px;
+    margin: 0!important;
+}
+.swiper-pagination-bullet-active{
+    background-color: #FF5400;
+    width: 20px;
+    border-radius: 20px;
+}
+.swiper-pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 0;
+    position: static;
+}
+.lectureDetail-section-02{
+    background-image: url(/public/img/lecture-detail-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #fff;
+}
+.lecture-details{
+    display: flex;
+    gap: 30px;
+    padding-top: 50px;
+}
+.lecture-detail{
+    flex: 1;
+}
+.lecture-details dl::before{
+    content: "";
+    width: 16px;height: 16px;
+    background: #FF5400;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 25px;
+}
+.lecture-details dt{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.lecture-details dd{
+    font-size: 18px;
 }
 @media(max-width: 1000px){
     .service-visual-txt h1 {
@@ -2280,6 +2487,42 @@
     .growthConsulting-section-05 h2{
         font-size: 80px;
     }
+    .after-consulting-list small{
+        font-size: 16px;
+        padding: 10px;
+    }
+    .card-list .card-front h3{
+        font-size: 25px;
+    }
+    .martechOnboarding-section-02 h3{
+        font-size: 25px;
+    }
+    .martechOnboarding-section-02 p{
+        font-size: 16px;
+    }
+    .martechOnboarding-section-02 .more::before{
+        width: 80px;
+        height: 80px;
+    }
+    .martechOnboarding-section-02 .more::before{
+        width: 85px;
+    }
+    .lectureDetail-section-03{
+        margin-top: -85px;
+    }
+    .lecture-details dl{
+        padding: 0;
+    }
+    .lecture-details dl::before{
+        width: 10px;
+        height: 10px;
+    }
+    .lecture-details dt{
+        font-size: 20px;
+    }
+    .lecture-details dd{
+        font-size: 14px;
+    }
 }
 @media(max-width: 900px){
     .service#sub-visual{
@@ -2295,6 +2538,7 @@
     .service#sub-visual .btn-orange {
         margin: 50px auto 0 auto;
         border: 1px solid #FF5400;
+        padding: 10px 20px;
     }
     .three-circles,
     .three-circle{
@@ -2436,6 +2680,75 @@
     .consulting-goal>div p{
         font-size: 14px;
     }
+    .after-consulting-lists{
+        flex-direction: column;
+    }
+    .martechOnboarding-section-02 {
+        padding: 30px 0!important;
+    }
+    .martechOnboarding-section-02 .flex-b--c{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 40px;
+    }
+    .martechOnboarding-section-02 h3{
+        font-size: 20px;
+    }
+    .martechOnboarding-section-02 p{
+        font-size: 14px;
+    }
+    .martechOnboarding-section-02 .more{
+        font-size: 16px;
+    }
+    .martechOnboarding-section-02 .more::after{
+        background-size: 175px 17px;
+        width: 200px;
+    }
+    .martechOnboarding-section-02 .more::before{
+        width: 55px;
+        height: 55px;
+        top: 50%;
+    }
+    .card-list{
+        padding: 30px 20px;
+        height: 350px;
+        min-height: 350px;
+        max-height: 350px;
+    }
+    .card-swiper-wrap .cardSwiper{
+        overflow: visible;
+    }
+    .card-lists{
+        padding-left: 0;
+    }
+    .edu-lists{
+        padding-left: 0;
+    }
+    .lectureDetail-section-04 .service-section-txt{
+        margin-bottom: 0;
+    }
+    .lecture-details{
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+    }
+    .lecture-details dl::before,
+    .lecture-details dt{
+        margin-bottom: 10px;
+    }
+    .lecture-details dd br{
+        display: none;
+    }
+    .service-section section{
+        margin-top: 0;
+    }
+    .lectureDetail-section-03 .review-swiper-wrap{
+        margin-top: 0;
+    }
+    .lectureDetail-section-04{
+        padding-bottom: 100px!important;
+    }
 }
 @media (max-width: 767px){
     .flex-list{
@@ -2466,5 +2779,6 @@
     .news-thumb img{
         width: 100%;
     }
+  
 }
 /* :::::::::::::::::::::: SERVICES -end ::::::::::::::::::::::*/
