@@ -21,3 +21,6 @@
 * resource page created
 * resource detail page created
 
+## 20240423 Updates
+* lecture detail page created 
+* martech onboarding page created
