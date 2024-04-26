@@ -24,3 +24,10 @@
 ## 20240423 Updates
 * lecture detail page created 
 * martech onboarding page created
+
+## 20240425 Updates
+* martech maintenance page created
+* ga4 page created
+* dashboard page created
+* rename swipers
+* landing page created
