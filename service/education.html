@@ -703,7 +703,7 @@
     </footer>
     <script>
         // swiper
-        var swiper = new Swiper(".reviewSwiper", {
+        var reviewSwiper = new Swiper(".reviewSwiper", {
             slidesPerView: 1,
             spaceBetween: 20,
             navigation: {
@@ -712,11 +712,11 @@
             },
         });
         // swiper
-        var swiper = new Swiper(".eduSwiper", {
+        var eduSwiper = new Swiper(".eduSwiper", {
             slidesPerView: 3,
             spaceBetween: 20,
             pagination: {
-                el: ".swiper-pagination",
+                el: ".edu-swiper-wrap .swiper-pagination",
                 clickable: true,
             },
             navigation: {

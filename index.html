@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    
+   <!-- Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    
+    <!-- Lib -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    
+    <!-- Custom  -->
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/common.css">
+    <link rel="stylesheet" href="/public/css/default.css">
+    <link rel="stylesheet" href="/public/css/sub.css">
+    <script defer src="/public/js/main.js"></script>
+</head>
+<body>
+   <header id="header" class="main-header">
+        <div class="inr">
+            <figure class="logo-wrap">
+                <a href="/index.html">
+                    <img src="/public/img/logo.png" alt=" 로고 | logo | 허들러스" class="logo">
+                </a>
+            </figure>
+            <div class="header-content flex-b--c">
+                <ul class="header-menus">
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Service</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/service/Ga4.html">GA4 완전 도입</a></li>
+                            <li class="header-sub-menu"><a href="/service/martechMaintenance.html">마테크 온보딩</a></li>
+                            <li class="header-sub-menu"><a href="/service/growthConsulting.html">그로스 컨설팅</a></li>
+                            <li class="header-sub-menu"><a href="/service/dashboard.html">통합 대시보드 구축</a></li>
+                            <li class="header-sub-menu"><a href="/service/education.html">교육 및 트레이닝</a></li>
+                            <li class="header-sub-menu"><a href="/service/martechMaintenance.html">마테크 유지보수</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu"><a href="/portfolio.html">Portfolio</a></li>
+                    <li class="header-menu"><a href="/caseStudy.html">Case Study</a></li>
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Resources</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/resource/blog.html">Blog / News</a></li>
+                            <li class="header-sub-menu"><a href="/resource/resource.html">자료실</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Company</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/company/aboutUs.html">About Us</a></li>
+                            <li class="header-sub-menu"><a href="/company/recruitment.html">Recruitment</a></li>
+                            <li class="header-sub-menu"><a href="/company/contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn-orange">
+                    <a href="/company/contact.html">티타임 신청</a>
+                </button>
+            </div>
+            <div class="mobile-menu-btn pc-hidden" onclick="mobileBtnHandler()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <span class="header-bg">
+            <div class="inr">
+                <ul class="header-menu-previews">
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Service</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Portfolio</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Case Study</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Resources</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Company</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </span>
+    </header>
+    <main>
+        <section id="main-visual">
+            <div class="inr">
+                <div class="main-visual-txt">
+                    <h1>데이터 기반의 의사결정과<br>빠른 비즈니스 성장을 원하시나요?</h1>
+                </div>
+            </div>
+        </section>
+        <section id="main">
+            <section class="main-section-01 bg-black">
+                <div class="main-subscription flex-b--c inr">
+                    <h2>이메일을 입력해주시면 <span class="font-orange">허들러스의 다양한 케이스 스터디</span>와 <span class="font-orange">200개 이상의 다채로운 그로스 지식</span>이 발송됩니다.</h2>
+                    <form action="/subscribe" method="POST" class="subscription-wrap">
+                        <div class="input-wrap">
+                            <input type="text" name="subscribe[email]" id="subscribe_email" placeholder="이메일을 입력해주세요.">
+                            <button class="subscription-btn">
+                                <figure><img src="/public/img/icon-send.png" alt="icon-send"></figure>
+                            </button>
+                        </div>
+                        <div class="formCheck">
+                            <label for="pricheck" class="checkBox">
+                                이메일 입력 시, HURDLERS의 개인정보 이용에 동의합니다.
+                                <input type="checkbox" value="1" name="pricheck" id="pricheck" required="">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="main-section-02 bg-orange">
+                <div class="inr">
+                    <ul class="static-lists">
+                        <li class="static-list">
+                            <small>누적 작업건수</small>
+                            <div>
+                                <figure><img src="/public/img/arrow-up.png" alt="arrow-up"></figure>
+                                <strong class="counter" data-target="2150">2150건</strong>
+                            </div>
+                        </li>
+                        <li class="static-list">
+                            <small>서비스 재이용률</small>
+                            <div>
+                                <figure><img src="/public/img/arrow-up.png" alt="arrow-up"></figure>
+                                <strong class="counter" data-target="78">78%</strong>
+                            </div>
+                        </li>
+                        <li class="static-list">
+                            <small>서비스 만족도</small>
+                            <div>
+                                <figure><img src="/public/img/arrow-up.png" alt="arrow-up"></figure>
+                                <strong><span class="counter" data-target="94">94</span>/100점</strong>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="main-section-03 service-section">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-45">더 좋은 서비스와<br> 데이터 역량 내재화가 필요하신가요?</h2>
+                        <p class="font-orange">허들러스는 이미 데이터 시장을 선도하는 많은 기업들과 협업을 하며 경험을 쌓았습니다.</p>
+                    </div>
+                    <ul class="logo-lists">
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-samsungeletronic.png" alt="samsungeletronic"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-samsungcorporation.png" alt="samsungcorporation"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-clab.png" alt="clab"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-samsungmedison.png" alt="samsungmedison"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-shinhan.png" alt="shinhan"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-lgeletronics.png" alt="lgeletronics"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-lguplus.png" alt="lguplus"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-lgcns.png" alt="lgcns"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-lginotech.png" alt="lginotech"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-eland.png" alt="eland"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-hyundai.png" alt="hyundai"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-privia.png" alt="privia"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-sinsegae.png" alt="sinsegae"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-shoopinganty.png" alt="shoopinganty"></figure>
+                        </li>
+                        <li class="logo-list">
+                            <figure><img src="/public/img/partner-koreatourism.png" alt="koreatourism"></figure>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="main-section-04 service-section bg-grey">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-45">이런 어려움이 있다면 <br>허들러스가 도와드릴 수 있습니다.</h2>
+                    </div>
+                    <ul class="main-concern-lists">
+                        <li class="main-concern-list">데이터 기반의 의사결정을 하고 싶지만 전문 인력이 없거나, 역량이 부족한 조직</li>
+                        <li class="main-concern-list">디지털 마케팅 툴을 사용하고 싶은데, 너무 많은 툴이 있어서, 방향성 잡기가 어려운 조직</li>
+                        <li class="main-concern-list">개발 인력의 부재 또는 리소스 문제로 데이터나 마테크 툴 유지보수를 가성비 있게 관리하고 싶은 조직</li>
+                        <li class="main-concern-list">가성비를 가지고 데이터 파이프라인과 마테크 Set을 구현하고 싶은 조직</li>
+                        <li class="main-concern-list">후속 투자를 위해 필요한 데이터를 수집하여 성장하고자 하는 조직</li>
+                        <li class="main-concern-list">데이터는 있으나 전사적인 활용 자체에 어려움을 겪는 조직</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="main-section-05 service-section">
+                <div class="service-section-txt">
+                    <h2 class="font-45">허들러스는 이런 서비스를 합니다.</h2>
+                </div>
+                <!-- Swiper -->
+                <div class="card-swiper-wrap card-lists-typeA">
+                    <div class="swiper cardSwiper inr">
+                        <div class="swiper-wrapper card-lists">
+                            <div class="swiper-slide card-list">
+                                <div class="card-list-wrap">
+                                    <small>Service 1</small>
+                                    <div class="card-front">
+                                        <h3>GA4 완전도입<br>프로젝트</h3>
+                                        <figure><img src="/public/img/main-service-list-1.png" alt="main-service-list-1"></figure>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>설계, 구축, 교육 활용할 수 있는 우리회사의 GA4 내재화를 돕는 서비스입니다.</p>
+                                        <span class="more after-arrow right">
+                                            <a href="/service/Ga4.html">View More</a>
+                                        </span>
+                                    </div>
+                                    <figure class="portfolio-more">
+                                        <a href="/service/Ga4.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card-list">
+                                <div class="card-list-wrap">
+                                    <small>Service 2</small>
+                                    <div class="card-front">
+                                        <h3>마테크 온보딩<br>프로젝트</h3>
+                                        <figure><img src="/public/img/main-service-list-2.png" alt="main-service-list-2"></figure>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>낯설기만한 국내의 훌륭한 마테크 툴들을 잘 활용 할 수 있도록 돕습니다.</p>
+                                        <span class="more after-arrow right">
+                                            <a href="/service/martechOnboarding.html">View More</a>
+                                        </span>
+                                    </div>
+                                    <figure class="portfolio-more">
+                                        <a href="/service/martechOnboarding.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card-list">
+                                <div class="card-list-wrap">
+                                    <small>Service 3</small>
+                                    <div class="card-front">
+                                        <h3>그로스 컨설팅</h3>
+                                        <figure><img src="/public/img/main-service-list-3.png" alt="main-service-list-3"></figure>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>데이터 기반의 비즈니스 성장을 위해서, 전문 그로스 컨설턴트가 기간제 컨설팅을 도와드립니다.</p>
+                                        <span class="more after-arrow right">
+                                            <a href="/service/growthConsulting.html">View More</a>
+                                        </span>
+                                    </div>
+                                    <figure class="portfolio-more">
+                                        <a href="/service/growthConsulting.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card-list">
+                                <div class="card-list-wrap">
+                                    <small>Service 4</small>
+                                    <div class="card-front">
+                                        <h3>통합 대시보드 구축</h3>
+                                        <figure><img src="/public/img/main-service-list-4.png" alt="main-service-list-4"></figure>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>분산된 데이터를 하나로 통합하여 파이프라인을 구축하고 이를 시각화한 대시보드를 제작합니다.</p>
+                                        <span class="more after-arrow right">
+                                            <a href="/service/dashboard.html">View More</a>
+                                        </span>
+                                    </div>
+                                    <figure class="portfolio-more">
+                                        <a href="/service/dashboard.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card-list">
+                                <div class="card-list-wrap">
+                                    <small>Service 5</small>
+                                    <div class="card-front">
+                                        <h3>교육 및 트레이닝</h3>
+                                        <figure><img src="/public/img/main-service-list-5.png" alt="main-service-list-5"></figure>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>만족도 높고, 이미 검증된 허들러스 제공하는 다양한 교육과 트레이닝을 제공합니다.</p>
+                                        <span class="more after-arrow right">
+                                            <a href="/service/education.html">View More</a>
+                                        </span>
+                                    </div>
+                                    <figure class="portfolio-more">
+                                        <a href="/service/education.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="swiper-slide card-list">
+                                <div class="card-list-wrap">
+                                    <small>Service 6</small>
+                                    <div class="card-front">
+                                        <h3>마테크 유지보수</h3>
+                                        <figure><img src="/public/img/main-service-list-6.png" alt="main-service-list-6"></figure>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>개발자를 채용할 필요없이, 가성비 있게 모든 마테크툴의 유지보수를 돕습니다.</p>
+                                        <span class="more after-arrow right">
+                                            <a href="/service/martechMaintenance.html">View More</a>
+                                        </span>
+                                    </div>
+                                    <figure class="portfolio-more">
+                                        <a href="/service/martechMaintenance.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="swiper-paginations">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <section class="main-section-06 service-section bg-grey">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <p>많이 해본 팀이 확률적으로 더 잘합니다</p>
+                        <h2 class="font-45">허들러스와 함께한 고객의 포트폴리오</h2>
+                    </div>
+                    <div class="portfolio-lists-wrap">
+                        <ul class="portfolio-lists">
+                            <li class="portfolio-list">
+                                <figure class="portfolio-thumb">
+                                    <img src="/public/img/img-portfolio-thumb.jpg" alt="img-portfolio-thumb">
+                                    <strong class="portfolio-company">Hurdlers</strong>
+                                </figure>
+                                <div class="portfolio-content">
+                                    <dl class="portfolio-txt">
+                                        <dt class="portfolio-tit">Hurdlers</dt>
+                                        <dd class="portfolio-desc">데이터 설계</dd>
+                                    </dl>
+                                    <ul class="portfolio-categories">
+                                        <li class="portfolio-category">GA4</li>
+                                        <li class="portfolio-category">Bigquery</li>
+                                    </ul>
+                                    <figure class="portfolio-more">
+                                        <a href="/portfolioDetail.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </li>
+                            <li class="portfolio-list">
+                                <figure class="portfolio-thumb">
+                                    <img src="/public/img/img-portfolio-thumb.jpg" alt="img-portfolio-thumb">
+                                    <strong class="portfolio-company">Hurdlers</strong>
+                                </figure>
+                                <div class="portfolio-content">
+                                    <dl class="portfolio-txt">
+                                        <dt class="portfolio-tit">Hurdlers</dt>
+                                        <dd class="portfolio-desc">데이터 설계</dd>
+                                    </dl>
+                                    <ul class="portfolio-categories">
+                                        <li class="portfolio-category">GA4</li>
+                                        <li class="portfolio-category">Bigquery</li>
+                                    </ul>
+                                    <figure class="portfolio-more">
+                                        <a href="/portfolioDetail.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </li>
+                            <li class="portfolio-list">
+                                <figure class="portfolio-thumb">
+                                    <img src="/public/img/img-portfolio-thumb.jpg" alt="img-portfolio-thumb">
+                                    <strong class="portfolio-company">Hurdlers</strong>
+                                </figure>
+                                <div class="portfolio-content">
+                                    <dl class="portfolio-txt">
+                                        <dt class="portfolio-tit">Hurdlers</dt>
+                                        <dd class="portfolio-desc">데이터 설계</dd>
+                                    </dl>
+                                    <ul class="portfolio-categories">
+                                        <li class="portfolio-category">GA4</li>
+                                        <li class="portfolio-category">Bigquery</li>
+                                    </ul>
+                                    <figure class="portfolio-more">
+                                        <a href="/portfolioDetail.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </li>
+                            <li class="portfolio-list">
+                                <figure class="portfolio-thumb">
+                                    <img src="/public/img/img-portfolio-thumb.jpg" alt="img-portfolio-thumb">
+                                    <strong class="portfolio-company">Hurdlers</strong>
+                                </figure>
+                                <div class="portfolio-content">
+                                    <dl class="portfolio-txt">
+                                        <dt class="portfolio-tit">Hurdlers</dt>
+                                        <dd class="portfolio-desc">데이터 설계</dd>
+                                    </dl>
+                                    <ul class="portfolio-categories">
+                                        <li class="portfolio-category">GA4</li>
+                                        <li class="portfolio-category">Bigquery</li>
+                                    </ul>
+                                    <figure class="portfolio-more">
+                                        <a href="/portfolioDetail.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </li>
+                            <li class="portfolio-list">
+                                <figure class="portfolio-thumb">
+                                    <img src="/public/img/img-portfolio-thumb.jpg" alt="img-portfolio-thumb">
+                                    <strong class="portfolio-company">Hurdlers</strong>
+                                </figure>
+                                <div class="portfolio-content">
+                                    <dl class="portfolio-txt">
+                                        <dt class="portfolio-tit">Hurdlers</dt>
+                                        <dd class="portfolio-desc">데이터 설계</dd>
+                                    </dl>
+                                    <ul class="portfolio-categories">
+                                        <li class="portfolio-category">GA4</li>
+                                        <li class="portfolio-category">Bigquery</li>
+                                    </ul>
+                                    <figure class="portfolio-more">
+                                        <a href="/portfolioDetail.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </li>
+                            <li class="portfolio-list">
+                                <figure class="portfolio-thumb">
+                                    <img src="/public/img/img-portfolio-thumb.jpg" alt="img-portfolio-thumb">
+                                    <strong class="portfolio-company">Hurdlers</strong>
+                                </figure>
+                                <div class="portfolio-content">
+                                    <dl class="portfolio-txt">
+                                        <dt class="portfolio-tit">Hurdlers</dt>
+                                        <dd class="portfolio-desc">데이터 설계</dd>
+                                    </dl>
+                                    <ul class="portfolio-categories">
+                                        <li class="portfolio-category">GA4</li>
+                                        <li class="portfolio-category">Bigquery</li>
+                                    </ul>
+                                    <figure class="portfolio-more">
+                                        <a href="/portfolioDetail.html">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.485754 15.4773C0.0464488 15.812 -0.0383433 16.4394 0.296365 16.8787C0.631074 17.3181 1.25854 17.4028 1.69784 17.0681L0.485754 15.4773ZM19.2646 3.31571C19.3386 2.7684 18.9548 2.26476 18.4075 2.1908L9.4886 0.985543C8.94129 0.911582 8.43765 1.29531 8.36369 1.84262C8.28973 2.38993 8.67345 2.89357 9.22076 2.96753L17.1487 4.03887L16.0774 11.9668C16.0034 12.5141 16.3871 13.0178 16.9344 13.0917C17.4817 13.1657 17.9854 12.782 18.0593 12.2346L19.2646 3.31571ZM1.69784 17.0681L18.8797 3.97723L17.6676 2.38637L0.485754 15.4773L1.69784 17.0681Z" fill="#888888"/>
+                                            </svg>
+                                        </a>
+                                    </figure>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn-orange after-arrow right">
+                        <span>
+                            <a href="/portfolio.html">더 보러가기</a>
+                        </span>
+                    </button>
+                </div>
+            </section>
+            <section class="main-section-07 service-section">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-45">블로그</h2>
+                        <p class="font-orange">필요한 정보를 찾고 있나요?</p>
+                    </div>
+                    <div class="blog-bottom-lists-wrap">
+                        <ul class="blog-bottom-lists">
+                            <li class="blog-bottom-list">
+                                <a href="/resource/blogDetail.html">
+                                    <figure class="blog-bottom-thumb"><img src="/public/img/blog-bottom-thumb.jpg" alt="blog-bottom-thumb"></figure>
+                                    <dl>
+                                        <dt>[웹사이트] GA4 전자상거래 이벤트</dt>
+                                        <dd>
+                                            안녕하세요! 그로스마케팅 파트너, 허들러스의 유성민입니다. 
+                                            허들러스는 구글 애널리틱스 활용에 깊은 노하우를 보유하
+                                        </dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="blog-bottom-list">
+                                <a href="/resource/blogDetail.html">
+                                    <figure class="blog-bottom-thumb"><img src="/public/img/blog-bottom-thumb.jpg" alt="blog-bottom-thumb"></figure>
+                                    <dl>
+                                        <dt>[웹사이트] GA4 전자상거래 이벤트</dt>
+                                        <dd>
+                                            안녕하세요! 그로스마케팅 파트너, 허들러스의 유성민입니다. 
+                                            허들러스는 구글 애널리틱스 활용에 깊은 노하우를 보유하
+                                        </dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="blog-bottom-list">
+                                <a href="/resource/blogDetail.html">
+                                    <figure class="blog-bottom-thumb"><img src="/public/img/blog-bottom-thumb.jpg" alt="blog-bottom-thumb"></figure>
+                                    <dl>
+                                        <dt>[웹사이트] GA4 전자상거래 이벤트</dt>
+                                        <dd>
+                                            안녕하세요! 그로스마케팅 파트너, 허들러스의 유성민입니다. 
+                                            허들러스는 구글 애널리틱스 활용에 깊은 노하우를 보유하
+                                        </dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn-orange after-arrow right">
+                        <span>
+                            <a href="/resource/blog.html">더 보러가기</a>
+                        </span>
+                    </button>
+                </div>
+            </section>
+        </section>
+    </main>
+    <section class="footer-banner">
+        <div class="inr">
+            <p>
+                <span>간단한 티타임도 괜찮습니다.</span>
+                문의사항을 남겨주시면 <br>24시간 내로 연락드립니다.
+            </p>
+            <button class="btn-white after-arrow right">
+                <span>
+                    <a href="/company/contact.html">서비스 문의하기</a>
+                </span>
+            </button>
+        </div>
+    </section>
+    <footer>
+        <div class="inr">
+            <figure class="logo-wrap">
+                <a href="/index.html">
+                    <img src="/public/img/f-logo.png" alt=" 로고 | logo | 허들러스" class="logo">
+                </a>
+            </figure>
+            <p class="address">
+                서울 광진구 아차산로51길 65, 2층
+                <br>사업자 등록번호 : 660-46-00794 | team@hurdlers.kr | <br class="pc-hidden"> 대표이사. 유성민
+            </p>
+            <p class="copy">© 2024 by Hurdlers</p>
+            <span class="pdf-down after-arrow right"><a href="/profile.pdf" download>회사소개서 다운로드</a></span>
+        </div>
+    </footer>
+    <script>
+        // swiper
+        var cardSwiper = new Swiper(".cardSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".card-swiper-wrap .swiper-button-next",
+                prevEl: ".card-swiper-wrap .swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                300: {
+                    slidesPerView: 1.05,
+                    spaceBetween: 5,
+                },
+                767: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                },
+                900: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            }
+        });
+    </script>
+    <script>
+          function counterAnimationHandler() {
+                const counters = document.querySelectorAll('.counter ')
+                counters.forEach(counter => {
+                counter.innerText = '0'
+                counter.dataset.count = 0;
+                const updateCounter = () => {
+                    const target = +counter.getAttribute('data-target') 
+                    const count = +counter.dataset.count
+            
+                    const increment = target / 300
+            
+                    if (count < target) {
+                        const newCount = Math.ceil(count + increment);
+                        counter.dataset.count = newCount;
+                        counter.innerText = numberWithCommas(newCount);
+                        setTimeout(updateCounter, 1);
+                    } else {
+                        counter.innerText = numberWithCommas(target);
+                    }
+                }
+            
+                updateCounter() //call the function event
+                })
+            
+                function numberWithCommas(x) {
+                    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                }
+            }
+            counterAnimationHandler()
+    </script>
+</body>
+</html>

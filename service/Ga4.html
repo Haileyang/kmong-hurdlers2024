@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA4 완전도입 Page</title>
+    
+   <!-- Font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    
+    <!-- Lib -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    
+    <!-- Custom  -->
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/common.css">
+    <link rel="stylesheet" href="/public/css/default.css">
+    <link rel="stylesheet" href="/public/css/sub.css">
+    <script defer src="/public/js/main.js"></script>
+</head>
+<body>
+   <header id="header" class="main-header">
+        <div class="inr">
+            <figure class="logo-wrap">
+                <a href="/index.html">
+                    <img src="/public/img/logo.png" alt=" 로고 | logo | 허들러스" class="logo">
+                </a>
+            </figure>
+            <div class="header-content flex-b--c">
+                <ul class="header-menus">
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Service</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/service/Ga4.html">GA4 완전 도입</a></li>
+                            <li class="header-sub-menu"><a href="/service/martechOnboarding.html">마테크 온보딩</a></li>
+                            <li class="header-sub-menu"><a href="/service/ga4.html">그로스 컨설팅</a></li>
+                            <li class="header-sub-menu"><a href="/service/dashboard.html">통합 대시보드 구축</a></li>
+                            <li class="header-sub-menu"><a href="/service/education.html">교육 및 트레이닝</a></li>
+                            <li class="header-sub-menu"><a href="/service/martechMaintenance.html">마테크 유지보수</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu"><a href="/portfolio.html">Portfolio</a></li>
+                    <li class="header-menu"><a href="/caseStudy.html">Case Study</a></li>
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Resources</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/resource/blog.html">Blog / News</a></li>
+                            <li class="header-sub-menu"><a href="/resource/resource.html">자료실</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu">
+                        <span class="after-arrow bottom">Company</span>
+                        <ul class="header-sub-menus">
+                            <li class="header-sub-menu"><a href="/company/aboutUs.html">About Us</a></li>
+                            <li class="header-sub-menu"><a href="/company/recruitment.html">Recruitment</a></li>
+                            <li class="header-sub-menu"><a href="/company/contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn-orange">
+                    <a href="/company/contact.html">티타임 신청</a>
+                </button>
+            </div>
+            <div class="mobile-menu-btn pc-hidden" onclick="mobileBtnHandler()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <span class="header-bg">
+            <div class="inr">
+                <ul class="header-menu-previews">
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Service</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Portfolio</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Case Study</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Resources</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                    <li class="header-menu-preview">
+                        <figure><img src="/public/img/img-header-preview.png" alt="img-header-preview"></figure>
+                        <dl>
+                            <dt>Company</dt>
+                            <dd>다양한 프로젝트 경험, 전문 인력, 효율화된 시스템과 함께합리적인 가격으로 서비스를 제공합니다.</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </span>
+    </header>
+    <main>
+        <section id="sub-visual" class="service service01">
+            <div class="inr">
+                <div class="service-visual-txt">
+                    <h1 class="sub-visual-tit">우리 회사가 데이터 기반의 <br>의사결정을 할 수 있을까?</h1>
+                    <p>복잡한 비즈니스 or 전문 데이터 팀이 없다면 GA4로도 충분히 가능합니다.</p>
+                </div>
+                <ul class="ga-visual-lists">
+                    <li class="ga-visual-list">1500개 이상의<br>GA4 세팅 이력</li>
+                    <li class="ga-visual-list">전문 엔지니어팀과<br>GA4 컨설턴트 보유</li>
+                    <li class="ga-visual-list">요구사항이나 규모에<br>적합한 커스텀 견적</li>
+                </ul>
+                <button class="btn-orange after-arrow right">
+                    <a href="">서비스 소개서</a>
+                </button> 
+            </div>
+        </section>
+        <section id="ga4" class="service-section">
+            <section class="ga4-section-01">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-45">체계적인 도입 시스템 부터 우리 회사에 딱 맞는 활용까지</h2>
+                    </div>  
+                    <div class="service-tab">
+                        <ul class="service-tab-lists">
+                            <li class="service-tab-list active">
+                                <span>01</span>
+                                <strong>킥오프</strong>
+                            </li>
+                            <li class="service-tab-list">
+                                <span>02</span>
+                                <strong>설계</strong>
+                            </li>
+                            <li class="service-tab-list">
+                                <span>03</span>
+                                <strong>택소노미 교육</strong>
+                            </li>
+                            <li class="service-tab-list">
+                                <span>04</span>
+                                <strong>스크립트 태깅</strong>
+                            </li>
+                            <li class="service-tab-list">
+                                <span>05</span>
+                                <strong>테이블 파티셔닝</strong>
+                            </li>
+                            <li class="service-tab-list">
+                                <span>06</span>
+                                <strong>대시보드 구축</strong>
+                            </li>
+                            <li class="service-tab-list">
+                                <span>07</span>
+                                <strong>GA4 활용 교육</strong>
+                            </li>
+                            <li class="service-tab-list">
+                                <span>08</span>
+                                <strong>유지보수 및 CS</strong>
+                            </li>
+                        </ul>
+                        <ul class="service-tab-contents">
+                            <li class="service-tab-content active">
+                                <div class="service-tab-left">
+                                    <dl>
+                                        <dt>
+                                            <strong>01</strong>
+                                            <div>
+                                                <h3>킥오프 단계</h3>
+                                                <span>예상 소요 시간 1주</span>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            모든 툴들은 사용 방안이 전제되어야 활용할 수 있습니다.
+                                            <br><br>
+                                            요구사항 질의서를 통해 실무자들의 궁금한점들을 체크하고,
+                                            플랫폼 스터디를 진행합니다.
+                                            <br><br>
+                                            해당 단계에서 가지고 있는 요구사항을 전제로 모든 단계들을 
+                                            설계하고 구축합니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="service-tab-right">
+                                    <figure><img src="/public/img/ga-service-01.png" alt="ga-service-01"></figure>
+                                </div>
+                            </li>
+                            <li class="service-tab-content">
+                                <div class="service-tab-left">
+                                    <dl>
+                                        <dt>
+                                            <strong>02</strong>
+                                            <div>
+                                                <h3>설계 단계</h3>
+                                                <span>예상 소요 시간 2주</span>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            1단계에서 수집한 요구사항을 기반으로 가능/불가능 
+                                            여부를 판단합니다.
+                                            <br><br>
+                                            실무진들의 활용 수준, 우리 회사의 형태, 플랫폼의 특성,
+                                            요구사항에 따라 커스텀한 데이터 설계 작업을 진행합니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="service-tab-right">
+                                    <figure><img src="/public/img/ga-service-02.png" alt="ga-service-02"></figure>
+                                </div>
+                            </li>
+                            <li class="service-tab-content">
+                                <div class="service-tab-left">
+                                    <dl>
+                                        <dt>
+                                            <strong>03</strong>
+                                            <div>
+                                                <h3>택소노미 교육</h3>
+                                                <span>예상 소요 시간 1일</span>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            개발팀이 직접 이벤트 스크립트 구현을 진행하기 이전에, 
+                                            택소노미에 대한 기본 지식을 교육합니다.
+                                            <br><br>
+                                            뿐만아니라, 기본적인 로그 분석에 쓰이는 용어들
+                                            (세션, 참여, 이벤트, 프로퍼티 등)을 배워봅니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="service-tab-right">
+                                    <figure><img src="/public/img/ga-service-03.png" alt="ga-service-03"></figure>
+                                </div>
+                            </li>
+                            <li class="service-tab-content">
+                                <div class="service-tab-left">
+                                    <dl>
+                                        <dt>
+                                            <strong>04</strong>
+                                            <div>
+                                                <h3>스크립트 태깅</h3>
+                                                <span>예상 소요 시간 2주</span>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            설계도가 확정되면, 허들러스 엔지니어 팀이 직접 
+                                            스크립트 태깅을 구현합니다.
+                                            <br><br>
+                                            관리를 편하게 하기 위해 웹은 GTM으로 구현합니다. 
+                                            앱은 별도의 가이드를 전달드려 구현을 실시합니다.
+                                            <br><br>
+                                            구현이 다된다면 2바퀴의 순환 과정을 거쳐 실제로 
+                                            데이터가 잘 적재되고 있는지를 관측합니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="service-tab-right">
+                                    <figure><img src="/public/img/ga-service-04.png" alt="ga-service-04"></figure>
+                                </div>
+                            </li>
+                            <li class="service-tab-content">
+                                <div class="service-tab-left">
+                                    <dl>
+                                        <dt>
+                                            <strong>05</strong>
+                                            <div>
+                                                <h3>테이블 파티셔닝 <small>(선택)</small></h3>
+                                                <span>예상 소요 시간 2주</span>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            추후 대시보드를 구현할때 가장 효율적인 비용으로 
+                                            차트를 구성하기 위해서 GA4 전체 로그 데이터 테이블을
+                                            필요한 데이터만 뽑아올 수 있도록 테이블 파티셔닝 작업을 
+                                            진행합니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="service-tab-right">
+                                    <figure><img src="/public/img/ga-service-05.png" alt="ga-service-05"></figure>
+                                </div>
+                            </li>
+                            <li class="service-tab-content">
+                                <div class="service-tab-left">
+                                    <dl>
+                                        <dt>
+                                            <strong>06</strong>
+                                            <div>
+                                                <h3>대시보드 구축 <small>(선택)</small></h3>
+                                                <span>예상 소요 시간 2주</span>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            1단계에서 기재한 요구사항에 따라 필요한 지표들을 날짜에 
+                                            따라 자동화된 형태로 보실 수 있도록 대시보드를 설계하고 
+                                            구축합니다.
+                                            <br><br>
+                                            허들러스에서 보유한 다양한 업종별 샘플 대시보드를 
+                                            참고할 수 있습니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="service-tab-right">
+                                    <figure><img src="/public/img/ga-service-06.png" alt="ga-service-06"></figure>
+                                </div>
+                            </li>
+                            <li class="service-tab-content">
+                                <div class="service-tab-left">
+                                    <dl>
+                                        <dt>
+                                            <strong>07</strong>
+                                            <div>
+                                                <h3>GA4 활용 교육 <small>(선택)</small></h3>
+                                                <span>예상 소요 시간 1일</span>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            대시보드 구축이 모두 완료된다면 활용 교육을 실시합니다.
+                                            <br><br>
+                                            다른 회사들은 어떻게 데이터를 분석하고 해석하는지, 
+                                            GA4에서 주로 봐야할 지표들이 무엇인지를 교육합니다.
+                                            <br><br>
+                                            또한 GA4 맞춤 리포트를 만드는 방법론에 대해서도 
+                                            사례와 함께 자세히 공유합니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="service-tab-right">
+                                    <figure><img src="/public/img/ga-service-07.png" alt="ga-service-07"></figure>
+                                </div>
+                            </li>
+                            <li class="service-tab-content">
+                                <div class="service-tab-left">
+                                    <dl>
+                                        <dt>
+                                            <strong>08</strong>
+                                            <div>
+                                                <h3>유지보수 및 CS(30일)</h3>
+                                            </div>
+                                        </dt>
+                                        <dd>
+                                            작업이 끝났다고 해서 프로젝트가 끝나게 되면 
+                                            내부적으로 활용하기가 어렵습니다.
+                                            <br><br>
+                                            30일동안 세팅된 GA4를 활용해보면서 궁금한 점들을 
+                                            CS 안내를 도와드립니다.
+                                            <br><br>
+                                            또한 데이터가 적재되면서 오류가 발견되는지 여부를 
+                                            판단하기 위한 검수도 함께 실시합니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="service-tab-right">
+                                    <figure><img src="/public/img/ga-service-08.png" alt="ga-service-08"></figure>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="ga4-section-02 pb-0">
+                <div class="service-section-txt">
+                    <h2 class="font-45">허들러스 서비스 후기</h2>
+                </div>
+                <!-- Swiper -->
+                <div class="review-swiper-wrap">
+                    <div class="swiper reviewSwiper">
+                        <div class="swiper-wrapper review-lists">
+                            <div class="swiper-slide review-list">
+                                <div class="review-list-wrap">
+                                    <figure>
+                                        <img src="/public/img/review-thumb.jpg" alt="review-thumb">
+                                        <dl>
+                                            <dt>무브 변선의님</dt>
+                                            <dd>마케팅 담당자</dd>
+                                        </dl>
+                                    </figure>
+                                    <div class="review-content">
+                                        <dl>
+                                            <dt>온보딩 컨설팅 덕에 처음 앱을 런칭함에도<br>명확한 지표 정의가 가능했습니다.</dt>
+                                            <dd>상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide review-list">
+                                <div class="review-list-wrap">
+                                    <figure>
+                                        <img src="/public/img/review-thumb.jpg" alt="review-thumb">
+                                        <dl>
+                                            <dt>무브 변선의님</dt>
+                                            <dd>마케팅 담당자</dd>
+                                        </dl>
+                                    </figure>
+                                    <div class="review-content">
+                                        <dl>
+                                            <dt>온보딩 컨설팅 덕에 처음 앱을 런칭함에도<br>명확한 지표 정의가 가능했습니다.</dt>
+                                            <dd>상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다.상세 내용이 들어가는 자리입니다. 상세 내용이 들어가는 자리입니다. </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-paginations">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="ga4-section-03">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-45">이미 검증된 허들러스의 GA4 도입</h2>
+                    </div>
+                    <div class="ga-tab">
+                        <ul class="ga-tab-lists">
+                            <li class="ga-tab-list active">
+                                <figure>
+                                    <img src="/public/img/ga-tab-icon-01-wh.png" alt="ga-tab-icon-01">
+                                    <img src="/public/img/ga-tab-icon-01-grey.png" alt="ga-tab-icon-01">
+                                </figure>
+                                <strong>인력 투입</strong>
+                            </li>
+                            <li class="ga-tab-list">
+                                <figure>
+                                    <img src="/public/img/ga-tab-icon-02-wh.png" alt="ga-tab-icon-02">
+                                    <img src="/public/img/ga-tab-icon-02-grey.png" alt="ga-tab-icon-02">
+                                </figure>
+                                <strong>경험</strong>
+                            </li>
+                            <li class="ga-tab-list">
+                                <figure>
+                                    <img src="/public/img/ga-tab-icon-03-wh.png" alt="ga-tab-icon-03">
+                                    <img src="/public/img/ga-tab-icon-03-grey.png" alt="ga-tab-icon-03">
+                                </figure>
+                                <strong>내재화 컨텐츠</strong>
+                            </li>
+                        </ul>
+                        <ul class="ga-tab-contents">
+                            <li class="ga-tab-content active">
+                                <div class="ga-tab-left">
+                                    <figure><img src="/public/img/ga-tab-01.png" alt="ga-tab-01"></figure>
+                                </div>
+                                <div class="ga-tab-right">
+                                    <dl>
+                                        <dt>
+                                            <figure><img src="/public/img/ga-tab-icon-01-orange.png" alt="ga-tab-icon-01"></figure>
+                                            <strong>인력 투입</strong>
+                                        </dt>
+                                        <dd>
+                                            아무리 작은 규모의 프로젝트라도<br>
+                                            하나의 프로젝트에 <strong>최소 4명</strong>이 투입됩니다.
+                                        </dd>
+                                        <dd>#그로스 엔지니어, #마케터, #PM</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="ga-tab-content">
+                                <div class="ga-tab-left">
+                                    <figure><img src="/public/img/ga-tab-02.png" alt="ga-tab-02"></figure>
+                                </div>
+                                <div class="ga-tab-right">
+                                    <dl>
+                                        <dt>
+                                            <figure><img src="/public/img/ga-tab-icon-02-orange.png" alt="ga-tab-icon-02"></figure>
+                                            <strong>경험</strong>
+                                        </dt>
+                                        <dd>
+                                            커머스, 병원, 브랜드, 교육 등 많은 업종의 데이터 
+                                            설계와 구현을 담당했습니다. 업종별로 
+                                            어떤 데이터를 주로 보는지, 중요하게 생각하는지 등을 레거시로 가지고 있습니다.
+                                        </dd>
+                                        <dd>#그로스 엔지니어, #마케터, #PM</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                            <li class="ga-tab-content">
+                                <div class="ga-tab-left">
+                                    <figure><img src="/public/img/ga-tab-03.png" alt="ga-tab-03"></figure>
+                                </div>
+                                <div class="ga-tab-right">
+                                    <dl>
+                                        <dt>
+                                            <figure><img src="/public/img/ga-tab-icon-03-orange.png" alt="ga-tab-icon-03"></figure>
+                                            <strong>내재화 컨텐츠</strong>
+                                        </dt>
+                                        <dd>
+                                            주로 물어보는 고객들의 질문사항이 독점 
+                                            가이드북으로 모두 만들어져있습니다. 충분히 
+                                            내재화를 위한 자료들을 해당 프로젝트를 통해 
+                                            함께 받아볼 수 있습니다.
+                                        </dd>
+                                        <dd>#그로스 엔지니어, #마케터, #PM</dd>
+                                    </dl>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="ga4-section-01">
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-45">GA4가 처음이더라도 괜찮습니다</h2>
+                        <p>프로젝트를 진행하면서 얻은 모든 산출물을 정리하여 전달드립니다</p>
+                    </div>
+                </div>
+                    <ul class="mockup-lists inr">
+                        <li class="mockup-list active">스크립트 일체</li>
+                        <li class="mockup-list">대시보드 샘플</li>
+                        <li class="mockup-list">설계도 샘플</li>
+                    </ul>
+                    <ul class="mockup-contents">
+                        <li class="mockup-content active">
+                            <!-- Swiper -->
+                            <div class="mockup-swiper-wrap mockup-swiper-01">
+                                <div class="swiper mockupSwiper01 inr">
+                                    <div class="swiper-wrapper mockup-01-lists">
+                                        <div class="swiper-slide mockup-01-list">
+                                            <figure><img src="/public/img/script-sample-01.jpg" alt="script-sample-01"></figure>
+                                        </div>
+                                        <div class="swiper-slide mockup-01-list">
+                                            <figure><img src="/public/img/script-sample-02.jpg" alt="script-sample-02"></figure>
+                                        </div>
+                                        <div class="swiper-slide mockup-01-list">
+                                            <figure><img src="/public/img/script-sample-03.jpg" alt="script-sample-03"></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-paginations">
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mockup-content">
+                            <!-- Swiper -->
+                            <div class="mockup-swiper-wrap mockup-swiper-02">
+                                <div class="swiper mockupSwiper02 inr">
+                                    <div class="swiper-wrapper mockup-02-lists">
+                                        <div class="swiper-slide mockup-02-list">
+                                            <figure><img src="/public/img/dashboard-sample-01.jpg" alt="dashboard-sample-01"></figure>
+                                        </div>
+                                        <div class="swiper-slide mockup-02-list">
+                                            <figure><img src="/public/img/dashboard-sample-02.jpg" alt="dashboard-sample-02"></figure>
+                                        </div>
+                                        <div class="swiper-slide mockup-02-list">
+                                            <figure><img src="/public/img/dashboard-sample-03.jpg" alt="dashboard-sample-03"></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-paginations">
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mockup-content">
+                            <!-- Swiper -->
+                            <div class="mockup-swiper-wrap mockup-swiper-03">
+                                <div class="swiper mockupSwiper03 inr">
+                                    <div class="swiper-wrapper mockup-03-lists">
+                                        <div class="swiper-slide mockup-03-list">
+                                            <figure><img src="/public/img/plan-sample-01.jpg" alt="plan-sample-01"></figure>
+                                        </div>
+                                        <div class="swiper-slide mockup-03-list">
+                                            <figure><img src="/public/img/plan-sample-02.jpg" alt="plan-sample-02"></figure>
+                                        </div>
+                                        <div class="swiper-slide mockup-03-list">
+                                            <figure><img src="/public/img/plan-sample-03.jpg" alt="plan-sample-03"></figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-paginations">
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            </section>
+        </section>
+    </main>
+    <section class="footer-banner">
+        <div class="inr">
+            <p>
+                <span>간단한 티타임도 괜찮습니다.</span>
+                문의사항을 남겨주시면 <br>24시간 내로 연락드립니다.
+            </p>
+            <button class="btn-white after-arrow right">
+                <span>
+                    <a href="/company/contact.html">서비스 문의하기</a>
+                </span>
+            </button>
+        </div>
+    </section>
+    <footer>
+        <div class="inr">
+            <figure class="logo-wrap">
+                <a href="/index.html">
+                    <img src="/public/img/f-logo.png" alt=" 로고 | logo | 허들러스" class="logo">
+                </a>
+            </figure>
+            <p class="address">
+                서울 광진구 아차산로51길 65, 2층
+                <br>사업자 등록번호 : 660-46-00794 | team@hurdlers.kr | <br class="pc-hidden"> 대표이사. 유성민
+            </p>
+            <p class="copy">© 2024 by Hurdlers</p>
+            <span class="pdf-down after-arrow right"><a href="/profile.pdf" download>회사소개서 다운로드</a></span>
+        </div>
+    </footer>
+    <script defer>
+
+        //TAB MENU VISIBILITY EVENT -start
+        const serviceTabLists = document.querySelectorAll(".service-tab-list");
+        const serviceTabContents = document.querySelectorAll(".service-tab-content");
+
+        serviceTabLists.forEach((item, idx) => {
+        item.addEventListener("click", () => {
+            hideServiceContents();
+            hideServiceItems();
+            item.classList.add("active");
+            serviceTabContents[idx].classList.add("active");
+        });
+        });
+
+        function hideServiceContents() {
+            serviceTabContents.forEach((tabContent) => tabContent.classList.remove("active"));
+        }
+
+        function hideServiceItems() {
+            serviceTabLists.forEach((tabList) => tabList.classList.remove("active"));
+        }
+
+        //TAB MENU VISIBILITY EVENT -start
+        const gaTabLists = document.querySelectorAll(".ga-tab-list");
+        const gaTabContents = document.querySelectorAll(".ga-tab-content");
+
+        gaTabLists.forEach((item, idx) => {
+        item.addEventListener("click", () => {
+            hideGaContents();
+            hideGaItems();
+            item.classList.add("active");
+            gaTabContents[idx].classList.add("active");
+        });
+        });
+
+        function hideGaContents() {
+            gaTabContents.forEach((tabContent) => tabContent.classList.remove("active"));
+        }
+
+        function hideGaItems() {
+            gaTabLists.forEach((tabList) => tabList.classList.remove("active"));
+        }
+
+        //TAB MENU VISIBILITY EVENT -start
+        const mockupTabLists = document.querySelectorAll(".mockup-list");
+        const mockupTabContents = document.querySelectorAll(".mockup-content");
+
+        mockupTabLists.forEach((item, idx) => {
+        item.addEventListener("click", () => {
+            hideMockupContents();
+            hideMockupItems();
+            item.classList.add("active");
+            mockupTabContents[idx].classList.add("active");
+        });
+        });
+
+        function hideMockupContents() {
+            mockupTabContents.forEach((tabContent) => tabContent.classList.remove("active"));
+        }
+
+        function hideMockupItems() {
+            mockupTabLists.forEach((tabList) => tabList.classList.remove("active"));
+        }
+
+    </script>
+    <script>
+        // swiper
+        var reviewSwiper = new Swiper(".reviewSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".reviewSwiper .swiper-button-next",
+                prevEl: ".reviewSwiper .swiper-button-prev",
+            },
+        });
+        // swiper
+        var mockupSwiper01 = new Swiper(".mockupSwiper01", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: ".mockup-swiper-01 .swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".mockup-swiper-01 .swiper-button-next",
+                prevEl: ".mockup-swiper-01 .swiper-button-prev",
+            },
+        });
+        // swiper
+        var mockupSwiper02 = new Swiper(".mockupSwiper02", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: ".mockup-swiper-02 .swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".mockup-swiper-02 .swiper-button-next",
+                prevEl: ".mockup-swiper-02 .swiper-button-prev",
+            },
+        });
+        // swiper
+        var mockupSwiper03 = new Swiper(".mockupSwiper03", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: ".mockup-swiper-03 .swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".mockup-swiper-03 .swiper-button-next",
+                prevEl: ".mockup-swiper-03 .swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
