@@ -50,13 +50,15 @@
                             <li class="header-sub-menu"><a href="/service/martechMaintenance.html">마테크 유지보수</a></li>
                         </ul>
                     </li>
-                    <li class="header-menu"><a href="/portfolio.html">Portfolio</a></li>
-                    <li class="header-menu"><a href="/caseStudy.html">Case Study</a></li>
+                    <li class="header-menu"><a href="/resource/portfolio.html">Portfolio</a></li>
+                    <li class="header-menu"><a href="/resource/caseStudy.html">Case Study</a></li>
                     <li class="header-menu">
                         <span class="after-arrow bottom">Resources</span>
                         <ul class="header-sub-menus">
-                            <li class="header-sub-menu"><a href="/resource/blog.html">Blog / News</a></li>
-                            <li class="header-sub-menu"><a href="/resource/resource.html">자료실</a></li>
+                            <li class="header-sub-menu"><a href="/resource/portfolio.html">포트폴리오</a></li>
+                            <li class="header-sub-menu"><a href="/resource/blog.html">Blog / 뉴스 기사</a></li>
+                            <li class="header-sub-menu"><a href="/resource/caseStudy.html">CASE STUDY</a></li>
+                            <li class="header-sub-menu"><a href="/resource/resource.html">허들러스 가이드</a></li>
                         </ul>
                     </li>
                     <li class="header-menu">
@@ -166,7 +168,7 @@
                     </li>
                 </ul>
                 <button class="btn-orange after-arrow right">
-                    <a href="">서비스 소개서</a>
+                    <a href="#serviceDownload">서비스 소개서</a>
                 </button> 
             </div>
         </section>
@@ -361,6 +363,34 @@
                     </ul>
                 </div>
             </section>
+            <section id="serviceDownload" class="martechMaintenance-section-05 bg-black" >
+                <div class="inr">
+                    <div class="service-section-txt">
+                        <h2 class="font-45">좋은 마테크를 <span>활용</span>하는 데 집중하세요<br> 기술적인 부분은 허들러스가 해결합니다</h2>
+                    </div>
+                    <div class="flex-b--c">
+                        <dl>
+                            <dt>서비스 소개서 받기</dt>
+                            <dd>신청 후 즉시 파일이 전달됩니다.</dd>
+                        </dl>
+                        <form action="/subscribe" method="POST" class="subscription-wrap">
+                            <div class="input-wrap">
+                                <input type="text" name="subscribe[email]" id="subscribe_email" placeholder="이메일을 입력해주세요.">
+                                <button class="subscription-btn">
+                                    <figure><img src="/public/img/icon-send.png" alt="icon-send"></figure>
+                                </button>
+                            </div>
+                            <div class="formCheck">
+                                <label for="pricheck" class="checkBox">
+                                    이메일 입력 시, HURDLERS의 개인정보 이용에 동의합니다.
+                                    <input type="checkbox" value="1" name="pricheck" id="pricheck" required="">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
     <section class="footer-banner">
@@ -409,7 +439,7 @@
                     slidesPerView: 1.05,
                     spaceBetween: 5,
                 },
-                767: {
+                500: {
                     slidesPerView: 2,
                     spaceBetween: 15,
                 },

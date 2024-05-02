@@ -1,7 +1,7 @@
 /* :::::::::::::::::::::: HEADER -start ::::::::::::::::::::::*/
 header {
     position: fixed;
-    z-index: 999;
+    z-index: 99999;
     width: 100%;
     left: 0; top: 0;
     padding: 25px 0;
@@ -229,6 +229,8 @@ header .btn-orange{
         padding-bottom: 15px;
         margin-bottom: 15px;
         gap: 0;
+        overflow: scroll;
+        height: 100%;
     }
     header .header-menu{
         width: 100%;
@@ -259,6 +261,7 @@ header .btn-orange{
         width: 100%;
         border-radius: 0;
         height: 60px;
+        z-index: 10000;
     }
     header .header-menu span::after{
         display: none;

@@ -131,7 +131,7 @@
         <section id="main">
             <section class="main-section-01 bg-black">
                 <div class="main-subscription flex-b--c inr">
-                    <h2>이메일을 입력해주시면 <span class="font-orange">허들러스의 다양한 케이스 스터디</span>와 <span class="font-orange">200개 이상의 다채로운 그로스 지식</span>이 발송됩니다.</h2>
+                    <h2>이메일을 입력해주시면 <span class="font-orange">허들러스의 다양한 케이스 스터디</span>와 <br> <span class="font-orange">200개 이상의 다채로운 그로스 지식</span>이 발송됩니다.</h2>
                     <form action="/subscribe" method="POST" class="subscription-wrap">
                         <div class="input-wrap">
                             <input type="text" name="subscribe[email]" id="subscribe_email" placeholder="이메일을 입력해주세요.">
@@ -153,24 +153,30 @@
                 <div class="inr">
                     <ul class="static-lists">
                         <li class="static-list">
-                            <small>누적 작업건수</small>
                             <div>
-                                <figure><img src="/public/img/arrow-up.png" alt="arrow-up"></figure>
-                                <strong class="counter" data-target="2150">2150건</strong>
+                                <small>누적 작업건수</small>
+                                <div>
+                                    <figure><img src="/public/img/arrow-up.png" alt="arrow-up"></figure>
+                                    <strong><span class="counter" data-target="2150">2150</span>건</strong>
+                                </div>
                             </div>
                         </li>
                         <li class="static-list">
-                            <small>서비스 재이용률</small>
                             <div>
-                                <figure><img src="/public/img/arrow-up.png" alt="arrow-up"></figure>
-                                <strong class="counter" data-target="78">78%</strong>
+                                <small>서비스 재이용률</small>
+                                <div>
+                                    <figure><img src="/public/img/arrow-up.png" alt="arrow-up"></figure>
+                                    <strong><span class="counter" data-target="78">78</span>%</strong>
+                                </div>
                             </div>
                         </li>
                         <li class="static-list">
-                            <small>서비스 만족도</small>
                             <div>
-                                <figure><img src="/public/img/arrow-up.png" alt="arrow-up"></figure>
-                                <strong><span class="counter" data-target="94">94</span>/100점</strong>
+                                <small>서비스 만족도</small>
+                                <div>
+                                    <figure><img src="/public/img/arrow-up.png" alt="arrow-up"></figure>
+                                    <strong><span class="counter" data-target="94">94</span>/100점</strong>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -238,11 +244,11 @@
                     </div>
                     <ul class="main-concern-lists">
                         <li class="main-concern-list">데이터 기반의 의사결정을 하고 싶지만 전문 인력이 없거나, 역량이 부족한 조직</li>
-                        <li class="main-concern-list">디지털 마케팅 툴을 사용하고 싶은데, 너무 많은 툴이 있어서, 방향성 잡기가 어려운 조직</li>
-                        <li class="main-concern-list">개발 인력의 부재 또는 리소스 문제로 데이터나 마테크 툴 유지보수를 가성비 있게 관리하고 싶은 조직</li>
-                        <li class="main-concern-list">가성비를 가지고 데이터 파이프라인과 마테크 Set을 구현하고 싶은 조직</li>
-                        <li class="main-concern-list">후속 투자를 위해 필요한 데이터를 수집하여 성장하고자 하는 조직</li>
-                        <li class="main-concern-list">데이터는 있으나 전사적인 활용 자체에 어려움을 겪는 조직</li>
+                        <li class="main-concern-list">디지털 마케팅 툴을 사용하고 싶은데,<br>너무 많은 툴이 있어서,<br>방향성 잡기가 어려운 조직</li>
+                        <li class="main-concern-list">개발 인력의 부재 또는 리소스 문제로<br>데이터나 마테크 툴 유지보수를 가성비 있게 관리하고 싶은 조직</li>
+                        <li class="main-concern-list">가성비를 가지고<br>데이터 파이프라인과 마테크 Set을 구현하고 싶은 조직</li>
+                        <li class="main-concern-list">후속 투자를 위해<br>필요한 데이터를 수집하여<br>성장하고자 하는 조직</li>
+                        <li class="main-concern-list">데이터는 있으나<br>전사적인 활용 자체에<br>어려움을 겪는 조직</li>
                     </ul>
                 </div>
             </section>
@@ -652,7 +658,7 @@
                     slidesPerView: 1.05,
                     spaceBetween: 5,
                 },
-                767: {
+                500: {
                     slidesPerView: 2,
                     spaceBetween: 15,
                 },
@@ -664,35 +670,55 @@
         });
     </script>
     <script>
-          function counterAnimationHandler() {
-                const counters = document.querySelectorAll('.counter ')
+        function counterAnimationHandler() {
+        const mainSection = document.querySelector('.main-section-02');
+        const counters = mainSection.querySelectorAll('.counter');
+        let sectionReached = false;
+
+        const updateCounters = () => {
+            if (!sectionReached && isScrolledIntoView(mainSection)) {
+                sectionReached = true;
                 counters.forEach(counter => {
-                counter.innerText = '0'
-                counter.dataset.count = 0;
-                const updateCounter = () => {
-                    const target = +counter.getAttribute('data-target') 
-                    const count = +counter.dataset.count
-            
-                    const increment = target / 300
-            
-                    if (count < target) {
-                        const newCount = Math.ceil(count + increment);
-                        counter.dataset.count = newCount;
-                        counter.innerText = numberWithCommas(newCount);
-                        setTimeout(updateCounter, 1);
-                    } else {
-                        counter.innerText = numberWithCommas(target);
-                    }
-                }
-            
-                updateCounter() //call the function event
-                })
-            
-                function numberWithCommas(x) {
-                    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-                }
+                    counter.innerText = '0';
+                    counter.dataset.count = 0;
+                    const target = +counter.getAttribute('data-target');
+                    const updateCounter = () => {
+                        const count = +counter.dataset.count;
+                        const increment = target / 300;
+                        if (count < target) {
+                            const newCount = Math.ceil(count + increment);
+                            counter.dataset.count = newCount;
+                            counter.innerText = newCount.toString().replace(/,/g, '');
+                            setTimeout(updateCounter, 1);
+                        } else {
+                            counter.innerText = target.toString().replace(/,/g, '');
+                        }
+                    };
+                    updateCounter();
+                });
+                // Remove the scroll event listener once the animation is triggered
+                window.removeEventListener('scroll', updateCounters);
             }
-            counterAnimationHandler()
+        };
+
+        window.addEventListener('scroll', updateCounters);
+        updateCounters(); // Call once to check immediately
+    }
+
+    function isScrolledIntoView(el) {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+        // Adjust this value if you want the animation to start before or after the element is fully in view
+        const buffer = 100; 
+        return (
+            rect.top >= -buffer &&
+            rect.left >= 0 &&
+            rect.bottom <= windowHeight + buffer &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    counterAnimationHandler();
     </script>
 </body>
 </html>

@@ -50,13 +50,15 @@
                             <li class="header-sub-menu"><a href="/service/martechMaintenance.html">마테크 유지보수</a></li>
                         </ul>
                     </li>
-                    <li class="header-menu"><a href="/portfolio.html">Portfolio</a></li>
-                    <li class="header-menu"><a href="/caseStudy.html">Case Study</a></li>
+                    <li class="header-menu"><a href="/resource/portfolio.html">Portfolio</a></li>
+                    <li class="header-menu"><a href="/resource/caseStudy.html">Case Study</a></li>
                     <li class="header-menu">
                         <span class="after-arrow bottom">Resources</span>
                         <ul class="header-sub-menus">
-                            <li class="header-sub-menu"><a href="/resource/blog.html">Blog / News</a></li>
-                            <li class="header-sub-menu"><a href="/resource/resource.html">자료실</a></li>
+                            <li class="header-sub-menu"><a href="/resource/portfolio.html">포트폴리오</a></li>
+                            <li class="header-sub-menu"><a href="/resource/blog.html">Blog / 뉴스 기사</a></li>
+                            <li class="header-sub-menu"><a href="/resource/caseStudy.html">CASE STUDY</a></li>
+                            <li class="header-sub-menu"><a href="/resource/resource.html">허들러스 가이드</a></li>
                         </ul>
                     </li>
                     <li class="header-menu">
@@ -204,11 +206,11 @@
                                 </div>
                             </div> 
                         </div>
+                        <div class="swiper-pagination"></div>
                         <div class="swiper-paginations">
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
-                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </section>
@@ -594,6 +596,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                         <div class="swiper-paginations">
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
@@ -641,7 +644,7 @@
                 prevEl: ".card-swiper-wrap .swiper-button-prev",
             },
             pagination: {
-                el: ".swiper-pagination",
+                el: ".card-swiper-wrap .swiper-pagination",
                 clickable: true,
             },
             breakpoints: {
@@ -649,7 +652,7 @@
                     slidesPerView: 1.05,
                     spaceBetween: 5,
                 },
-                767: {
+                500: {
                     slidesPerView: 2,
                     spaceBetween: 15,
                 },
@@ -673,7 +676,7 @@
             slidesPerView: 3,
             spaceBetween: 20,
             pagination: {
-                el: ".swiper-pagination",
+                el: ".edu-swiper-wrap .swiper-pagination",
                 clickable: true,
             },
             navigation: {
@@ -685,7 +688,7 @@
                     slidesPerView: 1.05,
                     spaceBetween: 5,
                 },
-                767: {
+                500: {
                     slidesPerView: 2,
                     spaceBetween: 15,
                 },

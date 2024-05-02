@@ -46,13 +46,15 @@
                             <li class="header-sub-menu"><a href="/service/martechMaintenance.html">마테크 유지보수</a></li>
                         </ul>
                     </li>
-                    <li class="header-menu"><a href="/portfolio.html">Portfolio</a></li>
-                    <li class="header-menu"><a href="/caseStudy.html">Case Study</a></li>
+                    <li class="header-menu"><a href="/resource/portfolio.html">Portfolio</a></li>
+                    <li class="header-menu"><a href="/resource/caseStudy.html">Case Study</a></li>
                     <li class="header-menu">
                         <span class="after-arrow bottom">Resources</span>
                         <ul class="header-sub-menus">
-                            <li class="header-sub-menu"><a href="/resource/blog.html">Blog / News</a></li>
-                            <li class="header-sub-menu"><a href="/resource/resource.html">자료실</a></li>
+                            <li class="header-sub-menu"><a href="/resource/portfolio.html">포트폴리오</a></li>
+                            <li class="header-sub-menu"><a href="/resource/blog.html">Blog / 뉴스 기사</a></li>
+                            <li class="header-sub-menu"><a href="/resource/caseStudy.html">CASE STUDY</a></li>
+                            <li class="header-sub-menu"><a href="/resource/resource.html">허들러스 가이드</a></li>
                         </ul>
                     </li>
                     <li class="header-menu">
@@ -125,12 +127,7 @@
         <section id="resource">
             <div class="inr">
                 <div class="filter-wrap">
-                    <select id="filter-all" multiple="multiple">
-                        <option value="item 1">item 1</option>
-                        <option value="item 2">item 2</option>
-                        <option value="item 3">item 3</option>
-                        <option value="item 4">item 4</option>
-                    </select>
+                    <div id="filter-all" class="active">All</div>
                     <select id="filter-tool" multiple="multiple">
                         <option value="item 1">item 1</option>
                         <option value="item 2">item 2</option>
@@ -331,27 +328,52 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const checkboxes = document.getElementById('filter-all');
+            initializeMultiselect('filter-tool', '툴 전체');
+        });
+
+        function initializeMultiselect(id, nonSelectedText) {
+            const checkboxes = document.getElementById(id);
 
             $(checkboxes).multiselect({
                 includeSelectAllOption: true,
-                nonSelectedText: 'All',
+                nonSelectedText: nonSelectedText,
+                buttonText: function(options, select) {
+                    if (options.length === 0) {
+                        return this.nonSelectedText;
+                    } else {
+                        const selectedOptions = $(select).val();
+                        return selectedOptions.join(', ');
+                    }
+                },
+                onChange: updateFilterAll, 
+                onSelectAll:updateFilterAll,
+                onDropdownHidden:function (option, checked) {
+                    const buttonWrap = $(this.$select).next('.btn-group');
+                    const button = $(this.$select).next('.btn-group').find('.btn');
+                    const selectedText = buttonWrap.find('.multiselect-selected-text').html();
+                    const nonSelectedText = this.options.nonSelectedText;
+                    if (selectedText !== nonSelectedText) {
+                        button.addClass('active')
+                    } else {
+                        button.removeClass('active')
+                    }
+                }, 
                 templates: {
                     button: '<button type="button" class="multiselect dropdown-toggle btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="multiselect-selected-text"></span></button>',
                 }
             });
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-            const checkboxes = document.getElementById('filter-tool');
 
-            $(checkboxes).multiselect({
-                includeSelectAllOption: true,
-                nonSelectedText: '툴 전체',
-                templates: {
-                    button: '<button type="button" class="multiselect dropdown-toggle btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="multiselect-selected-text"></span></button>',
+            
+            function updateFilterAll() {
+                const toolSelected = document.getElementById('filter-tool').querySelectorAll('option:checked').length > 0;
+                
+                if (toolSelected) {
+                    document.getElementById('filter-all').classList.remove('active');
+                } else {
+                    document.getElementById('filter-all').classList.add('active');
                 }
-            });
-        });
+            }
+        }
     </script>
 </body>
 </html>
