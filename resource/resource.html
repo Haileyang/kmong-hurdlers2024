@@ -328,42 +328,55 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            initializeMultiselect('filter-tool', '툴 전체');
+            initializeMultiselect('filter-tool', '툴 선택');
+        });
+
+        document.getElementById('filter-all').addEventListener('click', function() {
+            this.classList.add('active');
+            
+            $('#filter-tool').multiselect('deselectAll', false);
+            $('#filter-tool').multiselect('updateButtonText', '툴 선택');
+            $('#filter-tool').next('.btn-group').find('.btn').removeClass('active');
         });
 
         function initializeMultiselect(id, nonSelectedText) {
             const checkboxes = document.getElementById(id);
 
-            $(checkboxes).multiselect({
-                includeSelectAllOption: true,
-                nonSelectedText: nonSelectedText,
-                buttonText: function(options, select) {
-                    if (options.length === 0) {
-                        return this.nonSelectedText;
-                    } else {
-                        const selectedOptions = $(select).val();
-                        return selectedOptions.join(', ');
-                    }
-                },
-                onChange: updateFilterAll, 
-                onSelectAll:updateFilterAll,
-                onDropdownHidden:function (option, checked) {
-                    const buttonWrap = $(this.$select).next('.btn-group');
-                    const button = $(this.$select).next('.btn-group').find('.btn');
-                    const selectedText = buttonWrap.find('.multiselect-selected-text').html();
-                    const nonSelectedText = this.options.nonSelectedText;
-                    if (selectedText !== nonSelectedText) {
-                        button.addClass('active')
-                    } else {
-                        button.removeClass('active')
-                    }
-                }, 
-                templates: {
-                    button: '<button type="button" class="multiselect dropdown-toggle btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="multiselect-selected-text"></span></button>',
-                }
-            });
+                $(checkboxes).multiselect({
+                    includeSelectAllOption: true,
+                    nonSelectedText: nonSelectedText,
+                    buttonText: function(options, select) {
+                        const allOptions = $(select).children('option');
+                        const selectedValues = $(options).map(function() {
+                            return this.value;
+                        }).get();
 
-            
+                        if (selectedValues.length === allOptions.length) {
+                            return nonSelectedText === '툴 선택' ? '툴 전체' : nonSelectedText;
+                        } else if (selectedValues.length > 0) {
+                            return selectedValues.join(', ');
+                        } else {
+                            return nonSelectedText;
+                        }
+                    },
+                    onChange: updateFilterAll, 
+                    onSelectAll: updateFilterAll,
+                    onDropdownHidden: function(option, checked) {
+                        const buttonWrap = $(this.$select).next('.btn-group');
+                        const button = $(this.$select).next('.btn-group').find('.btn');
+                        const nonSelectedText = this.options.nonSelectedText;
+                        if ($(this.$select).val().length > 0) {
+                            button.addClass('active');
+                        } else {
+                            button.removeClass('active');
+                        }
+                    }, 
+                    templates: {
+                        button: '<button type="button" class="multiselect dropdown-toggle btn" data-bs-toggle="dropdown" aria-expanded="false"><span class="multiselect-selected-text"></span></button>',
+                    }
+                });
+
+                
             function updateFilterAll() {
                 const toolSelected = document.getElementById('filter-tool').querySelectorAll('option:checked').length > 0;
                 
@@ -373,6 +386,7 @@
                     document.getElementById('filter-all').classList.add('active');
                 }
             }
+            
         }
     </script>
 </body>

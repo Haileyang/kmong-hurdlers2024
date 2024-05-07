@@ -586,9 +586,8 @@
     .resource-detail-content>div{
         flex-direction: column;
     }
-    .resource-detail-thumb img{
-        max-height: 350px;
-        max-width: 100%;
+    .resource-detail-thumb{
+        display: none;
     }
     .resource-detail-tit{
         font-size: 35px;
@@ -1450,6 +1449,22 @@
     border-radius: 10px;
     overflow: hidden;
 }
+.blog-detail-writer{
+    margin-top: 50px;
+}
+.blog-detail-writer img{
+    max-height: 120px;
+}
+.blog-detail-writer dl{
+    margin-left: 20px;
+}
+.blog-detail-writer dt{
+    font-size: 18px;
+}
+.blog-detail-writer dd{
+    font-size: 15px;
+    color: #666;
+}
 @media (max-width: 1000px){
     .blog-bottom-list{
         width: calc(100%/2 - 10px);
@@ -1635,7 +1650,7 @@
         font-size: 26px;
     }
     .blog-detail-content{
-        padding: 0 32px;
+        padding: 0 16px;
     }
     .blog-detail-bottom{
         padding: 50px 0;
@@ -1986,6 +2001,8 @@
     justify-content: space-between;
     align-items: stretch;
     gap: 20px;
+    transition: all 0.3s;
+    border: 1px solid #fff;
 }
 .consulting-system{
     padding: 40px 35px;
@@ -1993,7 +2010,7 @@
     background-color: #fff;
     flex: 1;
 }
-.consulting-system:nth-child(1){
+.consulting-system:hover{
     border: 1px solid #FF5400;
 }
 .consulting-system strong{
@@ -2563,6 +2580,7 @@
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
+    gap: 20px;
 }
 .service-tab-lists::after{
     width: 100%;
@@ -2573,20 +2591,24 @@
     background-size: 100%;
     background-position: 0 0;
     position: absolute;
-    left: 0;top: 50%;
-    transform: translateY(-50%);
+    left: 0;top: 25px;
     z-index: 1;
 }
 .service-tab-list {
     position: relative;
     z-index: 10;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .service-tab-list strong{
-    position: absolute;
+    /* position: absolute; */
     left: 50%;
     top: 60px;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
+    margin-top: 10px;
     font-size: 14px;
     padding: 10px 15px;
     border-radius: 5px;
@@ -2909,8 +2931,10 @@
     gap: 30px;
     text-align: center;
     min-height: 348px;
+    border: 1px solid #fff;
+    transition: all 0.3s
 }
-.martech-service:nth-child(1){
+.martech-service:hover{
     border: 1px solid #FF5400;
 }
 .martech-service strong{
@@ -3272,6 +3296,11 @@
     }
 }
 @media(max-width: 900px){
+    #filter-all{
+        height: 39px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
     .growthConsulting-section-05 li{
         padding: 10px 20px;
         font-size: 16px;
@@ -3290,12 +3319,14 @@
     }
     .service-tab-list {
         display: flex;
+        flex-direction: row;
         align-items: center;
         border-radius: 10px;
         padding: 10px 10px;
     }
     .service-tab-list>strong{
         padding: 0;
+        margin: 0;
     }
     .service-tab-list>span{
         width: 30px!important;
