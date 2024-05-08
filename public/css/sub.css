@@ -30,6 +30,9 @@
 #sub-visual.case{
     background-image: url('../img/visual-case.jpg');
 } 
+#sub-visual.dashboard{
+    background-image: url('../img/service-visual-dashboard.jpg');
+} 
 .sub-visual-tit{
     font-size: 60px;
     font-weight: 600;
@@ -96,7 +99,9 @@
     display: flex;
     align-items: center;
     gap: 5px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow: auto;
+    width: 100%;
 }
 .portfolio-category{
     font-size: 14px;
@@ -1261,6 +1266,8 @@
     align-items: center;
     gap: 5px;
     margin-bottom: 15px;
+    width: calc(100% - 60px);
+    overflow: auto;
 }
 .blog-top-left-category{
     font-size: 16px;
@@ -1349,6 +1356,7 @@
 .blog-popular-list figure{
     overflow: hidden;
     border-radius: 10px;
+    min-width: 78px;
 }
 .blog-popular-list img{
     max-height: 78px;
@@ -1358,6 +1366,8 @@
     display: flex;
     gap: 5px;
     margin-top: 10px;
+    width: 250px;
+    overflow: auto;
 }
 .blog-top-right-category{
     font-size: 14px;
@@ -1471,6 +1481,9 @@
     }
 }
 @media (max-width: 900px){
+    .blog-top-right-categories{
+        width: 100%;
+    }
     .blog-top{
         flex-direction: column;
         margin-bottom: 20px;
@@ -1502,6 +1515,11 @@
     }
     .blog-top-writer dd{
         font-size: 12px;
+    }
+}
+@media (max-width: 767px){
+    .blog-top-right-categories{
+        width: 300px;
     }
 }
 @media (max-width: 500px){
@@ -2770,12 +2788,8 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
-#sub-visual.dashboard{
-    background-color: #fff;
-    padding-bottom: 0;
-}
 #sub-visual.dashboard h1{
-    color: #222;
+    padding-bottom: 600px;
 }
 #sub-visual.dashboard img{
     width: 100vw;
@@ -3298,6 +3312,9 @@
     }
 }
 @media(max-width: 900px){
+    #sub-visual.dashboard h1{
+        padding-bottom: 300px;
+    }
     .martechMaintenance-section-02 h3,
     .martechMaintenance-section-02 p{
         padding: 0 20px;
@@ -3784,7 +3801,14 @@
         width: 100%;
     }
     
-   
+    #sub-visual.dashboard .sub-visual-tit br{
+        display: none;
+    }
+}
+@media (max-width: 500px){
+    #sub-visual.dashboard {
+        background-image: url(../img/service-m-visual-dashboard.jpg);
+    }
 }
 /* :::::::::::::::::::::: SERVICES -end ::::::::::::::::::::::*/
 /* :::::::::::::::::::::: MAIN -start ::::::::::::::::::::::*/
