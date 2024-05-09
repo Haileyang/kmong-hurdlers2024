@@ -206,7 +206,7 @@
     padding-top: 140px;
 }
 .portfolio-detail-tit{
-    font-size: 55px;
+    font-size: 50px;
     font-weight: 600;
     word-break: break-all;
 }
@@ -927,7 +927,7 @@
     gap: 50px;
 }
 .recruitment-detail-left h1{
-    font-size: 55px;
+    font-size: 50px;
     font-weight: 600;
     margin-bottom: 40px;
 }
@@ -1698,11 +1698,11 @@
     margin-bottom: 100px;
 }
 .service-visual-txt h1{
-    font-size: 55px;
-    margin-bottom: 30px;
+    font-size: 50px;
+    margin-bottom: 20px;
 }
 .service-visual-txt p{
-    font-size: 25px;
+    font-size: 22px;
     text-align: center;
     color: #fff;
     line-height: 1.5;
@@ -1830,7 +1830,7 @@
     margin-top: 20px;
 }
 .service-section .font-50{
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 600;
     text-align: center;
 }
@@ -1845,7 +1845,7 @@
 .service-section-txt p{
     font-size: 20px;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 10px;
 }
 .principle-lists{
     display: flex;
@@ -1870,7 +1870,7 @@
     height: 100%;
 }
 .principle-list dt{
-    font-size: 28px;
+    font-size: 26px;
     color: #FF5400;
     font-weight: 600;
     min-height: 120px;
@@ -1892,7 +1892,7 @@
 }
 .review-swiper-wrap{
     width: 100%;
-    height: 405px;
+    height: 385px;
     background-image: url(/public/img/review-bg.jpg);
     background-size: 100% 342px;
     background-repeat: no-repeat;
@@ -1921,8 +1921,8 @@
     padding: 0;
 }
 .review-list-wrap .logo img{
-    max-height: 85px !important;
-    width: 85px !important;
+    max-height: 65px !important;
+    width: 65px !important;
     border-radius: 10px;
     box-shadow: 1px 1px 20px rgba(225, 225, 225, 0.5);
 }
@@ -1943,15 +1943,15 @@
     margin-top: 5px;
 }
 .review-list figure img{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     display: block;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 1px -10px 20px rgba(224,225,225,0.5)
 }
 .review-content{
-    margin-top: 130px;
+    margin-top: 115px;
 }
 .review-content dl{
     max-width: 630px;
@@ -2335,7 +2335,7 @@
 }
 .after-consulting-list small{
     display: block;
-    padding: 11px;
+    padding: 8px 11px;
     width: 100%;
     background-color: #666;
     color: #fff;
@@ -2357,6 +2357,12 @@
     padding: 0 20px;
     overflow: hidden;
 }
+.card-swiper-wrap .inr{
+    max-width: 1000px;
+}
+.card-swiper-wrap .swiper-paginations{
+    max-width: 1200px;
+}
 .card-swiper-wrap .swiper-paginations{
     top: 50%;
 }
@@ -2367,7 +2373,7 @@
     padding: 35px 40px;
 }
 .card-list small{
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     display: inline-block;
     font-weight: 600;
@@ -2381,12 +2387,12 @@
     fill: #fff;
 }
 .card-list .card-front h3{
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1.4;
     font-weight: 600;
 }
 .card-list .card-back p{
-    font-size: 30px;
+    font-size: 25px;
     color: #fff;
     position: relative;
     left: 0;top: 20px;
@@ -2431,9 +2437,9 @@
     background-color:transparent;
 }
 .card-list{
-    height: 416px;
-    max-height: 416px;
-    min-height: 416px;
+    height: 368px;
+    max-height: 368px;
+    min-height: 368px;
 }
 .card-lists-typeA .card-list:hover .portfolio-more {
     transform: rotate(180deg);
@@ -2450,7 +2456,7 @@
 .card-lists-typeA .card-list:hover .card-back{
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 245px;
     justify-content: space-between;
 }
 .card-lists-typeA .card-list:hover .card-front{
@@ -2473,12 +2479,13 @@
     margin-top: 0;
     position: static;
 }
-.lectureDetail-section-02{
+main .lectureDetail-section-02{
     background-image: url(/public/img/lecture-detail-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
     color: #fff;
+    padding: 100px 0;
 }
 .lecture-details{
     display: flex;
@@ -2514,13 +2521,13 @@
 }
 .ga-visual-list{
     flex: 1;
-    background-color: rgba(224,225,225,0.3);
-    height: 10vw;
+    background-color: rgba(224,225,225,0.1);
+    height: 230px;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 22px;
     color: #fff;
     font-weight: 600;
     line-height: 1.5;
@@ -2558,20 +2565,20 @@
 }
 .service-tab-left strong,
 .service-tab-list span{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     text-align: center;
-    line-height: 50px;
+    line-height: 60px;
     border-radius: 50%;
     background-color: #000;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 600;
     color: #fff;
     display: block;
 }
 .service-tab-left h3{
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 600;
-    margin-bottom: 5px;
 }
 .service-tab-left span{
     font-size: 18px;
@@ -2588,17 +2595,16 @@
     font-size: 20px;
 }
 .service-tab-contents{
-    margin-top: 120px;
+    margin-top: 80px;
 }
 .service-tab-lists{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-right: 100px;
+    padding-right: 65px;
     position: relative;
-    max-width: 1000px;
     margin: 0 auto;
-    gap: 20px;
+    gap: 15px;
 }
 .service-tab-lists::after{
     width: 100%;
@@ -2609,7 +2615,7 @@
     background-size: 100%;
     background-position: 0 0;
     position: absolute;
-    left: 0;top: 25px;
+    left: 10px;top: 19px;
     z-index: 1;
 }
 .service-tab-list {
@@ -2622,12 +2628,10 @@
     align-items: center;
 }
 .service-tab-list strong{
-    /* position: absolute; */
     left: 50%;
     top: 60px;
-    /* transform: translateX(-50%); */
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 16px;
     padding: 10px 15px;
     border-radius: 5px;
     background-color: #FF5400;
@@ -2754,7 +2758,13 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
+}
+.mockup-swiper-wrap .inr{
+    max-width: 1000px;
+}
+.mockup-swiper-wrap .swiper-paginations {
+    max-width: 1200px;
 }
 .mockup-list.active{
     background-color: #FF5400;
@@ -2762,7 +2772,7 @@
     font-weight: 500;
 }
 .mockup-list{
-    font-size: 20px;
+    font-size: 18px;
     padding: 15px 25px;
     background-color: #ccc;
     color: #888;
@@ -2830,7 +2840,7 @@
     margin-bottom: -2px;
 }
 .service-visual-txt span{
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 20px;
     text-align: center;
     display: block;
@@ -2991,8 +3001,8 @@
     width: 100%;
 }
 .martechMaintenance-section-05 dt{
-    font-size: 35px;
-    margin-bottom: 15px;
+    font-size: 30px;
+    margin-bottom: 5px;
     font-weight: 600;
 }
 .martechMaintenance-section-05 h2 {
@@ -3016,7 +3026,7 @@
     transform: translate(-50%, -50%);
 }
 .martechMaintenance-section-05 dd{
-    font-size: 20px;
+    font-size: 16px;
 }
 .subscription-wrap .input-wrap{
     display: flex;
@@ -3186,9 +3196,11 @@
         font-size: 16px;
         padding: 10px;
     }
-    .card-list .card-front h3,
-    .card-list .card-back p{
+    .card-list .card-front h3{
         font-size: 25px;
+    }
+    .card-list .card-back p{
+        font-size: 20px;
     }
     .martechOnboarding-section-02 h3{
         font-size: 25px;
@@ -3224,7 +3236,7 @@
         font-size: 18px;
     }
     .service-tab-left h3{
-        font-size: 25px;
+        font-size: 24px;
     }
     .service-tab-left span{
         font-size: 14px;
@@ -3824,7 +3836,7 @@
     align-items: center;
 }
 #main-visual h1{
-    font-size: 55px;
+    font-size: 50px;
     line-height: 1.5;
     color: #fff;
     font-weight: 600;
@@ -3877,10 +3889,10 @@
 .static-list small{
     font-size: 18px;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 .static-list strong{
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 500;
 }
 #main>section{
@@ -3931,7 +3943,7 @@
 }
 .main-section-06 p{
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .card-front figure{
     position: absolute;
@@ -4028,5 +4040,10 @@
     .main-concern-list{
         width: 100%;
     }
+}
+@media only screen and (-webkit-device-pixel-ratio: 2) and (device-height: 720px) and (device-width: 300px){
+   h1{
+    color: blue;
+   }
 }
 /* :::::::::::::::::::::: MAIN -end ::::::::::::::::::::::*/
