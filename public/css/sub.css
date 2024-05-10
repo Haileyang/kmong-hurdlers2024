@@ -1394,6 +1394,21 @@
 .blog-popular-list:hover img{
     transform: scale(1.2);
 }
+.blog-bottom-categories{
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+.blog-bottom-categories li{
+    font-size: 14px;
+    color: #fff;
+    padding: 4px 15px;
+    border-radius: 20px;
+    background-color: #FF5400;
+}
 .blog-bottom-list .blog-bottom-thumb img{
     width: 100%;
     max-height: 205px;
@@ -1403,6 +1418,7 @@
 .news-list .news-thumb  {
     border-radius: 10px 10px 0 0 ;
     overflow: hidden;
+    position: relative;
 }
 .blog-bottom-list dl,
 .news-list dl {
@@ -1521,10 +1537,16 @@
     .blog-top-right-categories{
         width: 300px;
     }
+    .blog-bottom-categories li{
+        font-size: 12px;
+    }
 }
 @media (max-width: 500px){
     .blog-bottom-list{
         width: 100%;
+    }
+    .blog-bottom-categories li{
+        font-size: 14px;
     }
 }
 /* :::::::::::::::::::::: BLOG -end ::::::::::::::::::::::*/
